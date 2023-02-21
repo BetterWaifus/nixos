@@ -3,13 +3,38 @@
   imports = [
     ./hardware-configuration.nix
   ];
-  # Use the GRUB 2 boot loader.
+  
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "nodev";
-  # boot.loader.grub.efiSupport = true;
-  # boot.loader.grub.efiInstallAsRemovable = true;
-  # boot.loader.efi.efiSysMountPoint = "/boot/efi";
-  # Define on which hard drive you want to install Grub.
-  # boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
+
+  home-manager.users.${user} = {
+    services.picom = {
+      enable = true;
+
+     shadow = true;
+    shadowOpacity = 0.75;
+     shadowOffsets =
+     [
+       (-7)
+       (-7)
+    ];
+
+     fade = true;
+      fadeSteps = [
+        (0.03)
+       (0.03)
+     ];
+
+     inactiveOpacity = 0.95;
+     activeOpacity = 1.0;
+
+     backend = "glx";
+
+    settings = {
+      corner-radius = 10;
+      shadow-radius = 7;
+      };
+     };
+  };
 }
