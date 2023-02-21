@@ -49,7 +49,7 @@
 
     };
 
-    home.file."~/.config/bashrc/.bashrc" = {
+    home.file.".config/bashrc/.bashrc" = {
       source=../modules/bashrc/bashrc.conf;
       recursive = true;
     };
