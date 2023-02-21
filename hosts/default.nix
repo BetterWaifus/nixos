@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, host, ... }:
+{ config, pkgs, user, lib, host, font, ... }:
 {
   imports = [
     ./configuration.nix
@@ -32,7 +32,7 @@
         window.border = 0;
 
         fonts = {
-          names = [ "JetBrains-Mono" ];
+          names = [ "${font}" ];
           style = "Regular";
           size = 8.0;
         };
@@ -69,11 +69,6 @@
           }
           {
             command = "${pkgs.feh}/bin/feh --bg-fill ~/wallpaper";
-            always = true;
-            notification = false;
-          }
-          {
-            command = "systemctl --user restart polybar.service";
             always = true;
             notification = false;
           }
