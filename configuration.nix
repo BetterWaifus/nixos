@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, host, ... }:
 
 let
   user="styley";
@@ -17,12 +17,14 @@ in
         pkgs=pkgs;
         config=config;
         lib=lib;
+        host=host;
       })
       (import ./home.nix {
         user=user;
         pkgs=pkgs;
         config=config;
         lib=lib;
+        host=host;
       })
     ];
 

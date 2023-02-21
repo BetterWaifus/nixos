@@ -1,13 +1,17 @@
-{ config, pkgs, user, lib, ...}:
+{ config, pkgs, user, lib, host, ...}:
 {
   imports =[
+    (import ./polybar.nix {
+      user=user;
+      pkgs=pkgs;
+      config=config;
+      lib=lib;
+      host=host;
+    })
     
-
   ];
 
   home-manager.users.${user} = {
-
-    home.file.".config/polybar/config.ini".source = ./dotfiles/polybar/config.ini;
 
     home.file."wallpaper"={
       source=./wallpaper;

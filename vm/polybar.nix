@@ -1,89 +1,87 @@
-{ pkgs, host, user, theme, ... }: {
+{ pkgs, host, user, ... }: {
   home-manager.users.${user} = {
     services.polybar = {
       enable = true;
       config = {
-        config = {
-          colors = {
-            background = "\${xrdb:color0:#222}";
-            foreground = "\${xrdb:color7:#222}";
-            foreground-alt = "\${xrdb:color7:#222}";
-            primary = "\${xrdb:color1:#222}";
-            secondary = "\${xrdb:color2:#222}";
-            alert = "\${xrdb:color3:#222}";
-            disabled = "#707880";
-          };
+        colors = {
+          background = "\${xrdb:color0:#222}";
+          foreground = "\${xrdb:color7:#222}";
+          foreground-alt = "\${xrdb:color7:#222}";
+          primary = "\${xrdb:color1:#222}";
+          secondary = "\${xrdb:color2:#222}";
+          alert = "\${xrdb:color3:#222}";
+          disabled = "#707880";
+        };
 
-          "bar/example" = {
-            width = "100%";
-            height = "16pt";
-            radius = 0;
+        "bar/example" = {
+          width = "100%";
+          height = "16pt";
+          radius = 0;
 
-            # dpi = 96;
+          # dpi = 96;
 
-            background = "\${colors.background}";
-            foreground = "\${colors.foreground}";
+          background = "\${colors.background}";
+          foreground = "\${colors.foreground}";
 
-            line-size = "3pt";
+          line-size = "3pt";
 
-            border-size = "0pt";
-            border-color = "#00000000";
+          border-size = "0pt";
+          border-color = "#00000000";
 
-            padding-left = 0;
-            padding-right = 1;
+          padding-left = 0;
+          padding-right = 1;
 
-            module-margin = 1;
+          module-margin = 1;
 
-            separator = "|";
-            separator-foreground = "\${colors.disabled}";
+          separator = "|";
+          separator-foreground = "\${colors.disabled}";
 
-            font-0 = "jetbrains-mono:pixelsize=12;2";
+          font-0 = "jetbrains-mono:pixelsize=12;2";
 
-            modules-left = "xworkspaces xwindow";
-            modules-right = "filesystem pulseaudio xkeyboard memory cpu wlan eth date";
+          modules-left = "xworkspaces xwindow";
+          modules-right = "filesystem pulseaudio xkeyboard memory cpu wlan eth date";
 
-            cursor-click = "pointer";
-            cursor-scroll = "ns-resize";
+          cursor-click = "pointer";
+          cursor-scroll = "ns-resize";
 
-            enable-ipc = true;
+          enable-ipc = true;
 
-            # tray-position = "right";
+          # tray-position = "right";
 
-            # wm-restack = "generic";
-            # wm-restack = "bspwm";
-            # wm-restack = "i3";
+          # wm-restack = "generic";
+          # wm-restack = "bspwm";
+          # wm-restack = "i3";
 
-            # override-redirect = true;
-          };
+          # override-redirect = true;
+        };
 
-          "module/xworkspaces" = {
-            type = "internal/xworkspaces";
+        "module/xworkspaces" = {
+          type = "internal/xworkspaces";
 
-            label-active = "%name%";
-            label-active-background = "\${colors.background-alt}";
-            label-active-underline = "\${colors.primary}";
-            label-active-padding = 1;
+          label-active = "%name%";
+          label-active-background = "\${colors.background-alt}";
+          label-active-underline = "\${colors.primary}";
+          label-active-padding = 1;
 
-            label-occupied = "%name%";
-            label-occupied-padding = 1;
+          label-occupied = "%name%";
+          label-occupied-padding = 1;
 
-            label-urgent = "%name%";
-            label-urgent-background = "\${colors.alert}";
-            label-urgent-padding = 1;
+          label-urgent = "%name%";
+          label-urgent-background = "\${colors.alert}";
+          label-urgent-padding = 1;
 
-            label-empty = "%name%";
-            label-empty-foreground = "\${colors.disabled}";
-            label-empty-padding = 1;
-          };
+          label-empty = "%name%";
+          label-empty-foreground = "\${colors.disabled}";
+          label-empty-padding = 1;
+        };
 
-          "module/xwindow" = {
-            type = "internal/xwindow";
-            label = "%title:0:60:...%";
-          };
+        "module/xwindow" = {
+          type = "internal/xwindow";
+          label = "%title:0:60:...%";
+        };
 
-          "module/pulseaudio" = {
-            type = "internal/pulseaudio";
-          };
+        "module/pulseaudio" = {
+          type = "internal/pulseaudio";
 
           format-volume-prefix = "VOL ";
           format-volume-prefix-foreground = "\${colors.primary}";
@@ -148,3 +146,7 @@
           label = "%date%";
           label-foreground = "\${colors.primary}";
         };
+      };
+    };
+  };
+}
