@@ -73,7 +73,7 @@
             notification = false;
           }
           {
-            command = "wal -c && wal -i ~/wallpaper";
+            command = "systemctl --user restart polybar.service";
             always = true;
             notification = false;
           }
