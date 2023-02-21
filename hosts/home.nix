@@ -1,4 +1,4 @@
-{ config, pkgs, user, host, ... }:
+{ config, pkgs, user, host, font, ... }:
 {
   imports = [
     ../modules
@@ -34,7 +34,7 @@
         # Font configuration
         font:
           normal:
-            family: JetBrains Mono
+            family: ${font}
             style: Regular
       '';
 

@@ -1,5 +1,5 @@
 {
-  description = "styley's dotfiles managed via nixos and home-manager";
+  description = "dotfiles managed via nixos and home-manager";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
@@ -20,6 +20,7 @@
           inherit (nixpkgs) lib;
           inherit inputs nixpkgs home-manager;
           user = "styley";
+          font = "JetBrains Mono";
         };
 
         modules = [
