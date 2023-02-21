@@ -12,6 +12,8 @@
     services.picom = {
       enable = true;
 
+      vSync = true;
+
      shadow = true;
     shadowOpacity = 0.75;
      shadowOffsets =
