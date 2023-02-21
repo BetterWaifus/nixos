@@ -7,10 +7,10 @@
 
   home-manager.users.${user} = {
 
-    # home.file."wallpaper"={
-    #   source=./wallpaper;
-    #   recursive = true;
-    # };
+     home.file."wallpaper"={
+       source= ../modules/desktop/wallpaper;
+       recursive = true;
+     };
 
     services.polybar = {
       script = "polybar";
