@@ -21,34 +21,6 @@
       enable = true;
     };
 
-    #services.picom = {
-    #  enable = true;
-
-    # shadow = true;
-    #shadowOpacity = 0.75;
-    # shadowOffsets =
-    # [
-    #   (-7)
-    #   (-7)
-    #];
-
-    # fade = true;
-    #  fadeSteps = [
-    #    (0.03)
-    #   (0.03)
-    # ];
-
-    # inactiveOpacity = 0.95;
-    # activeOpacity = 1.0;
-
-    # backend = "glx";
-
-    #settings = {
-    #  corner-radius = 10;
-    #  shadow-radius = 7;
-    #  };
-    # };
-
     xsession.windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
