@@ -23,6 +23,7 @@
       pywal
       arandr
       jetbrains-mono
+      roboto
       i3lock
       pulseaudio
       maim
