@@ -40,5 +40,18 @@
       '';
 
     };
+
+    home.file = {
+      ".config/rofi/config.rasi".text = ''
+       /* Dark theme. */
+       @import "~/.cache/wal/colors-rofi-dark"
+      '';
+
+    };
+
+    home.file."~/.config/bashrc/.bashrc" = {
+      source=../modules/bashrc/bashrc.conf;
+      recursive = true;
+    };
   };
 }
