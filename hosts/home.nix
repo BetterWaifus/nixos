@@ -26,6 +26,7 @@
       i3lock
       pulseaudio
       maim
+      light
     ];
 
     home.file = {
