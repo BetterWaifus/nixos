@@ -11,7 +11,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, lib, ... }:
+  outputs = { self, nixpkgs, home-manager, lib, ... }:
     let
       createHost = { hostName }: lib.nixosSystem {
         system = "x86_64-linux";
@@ -22,14 +22,13 @@
 
         modules = [
           home-manager.nixosModules.home-manager
-          ./configuration.nix # shared nixos configuration across all hosts
-          # ./home.nix # shared configuration for home-manager across all hosts
-          ./${hostName} # vm specific configuration, including hardware
+          ./hosts
+          ./hosts/${hostName} # host specific configuration, including hardware
         ];
       };
     in
     {
-      nixosConfigurations = {
+      nixosConfigurations =  {
         desktop = createHost { hostName = "desktop"; };
         laptop = createHost {hostName = "laptop"; };
         vm = createHost {hostName = "vm"; };

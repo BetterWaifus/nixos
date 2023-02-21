@@ -2,32 +2,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, host, ... }:
-
-let
-  user="styley";
-in
+{ config, pkgs, lib, host, user, ... }:
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./vm/hardware-configuration.nix
-      <home-manager/nixos>
-      (import ./vm/default.nix {
-        user=user;
-        pkgs=pkgs;
-        config=config;
-        lib=lib;
-        host=host;
-      })
-      (import ./home.nix {
-        user=user;
-        pkgs=pkgs;
-        config=config;
-        lib=lib;
-        host=host;
-      })
-    ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -187,5 +163,19 @@ in
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.11"; # Did you read the comment?
-
+  
+  # enable flakes
+  nix = {
+    settings = {
+      auto-optimise-store = true; # Optimise syslinks
+    };
+    gc = {
+      # Automatic garbage collection
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+    # use flakes
+    extraOptions = "experimental-features = nix-command flakes";
+  };
 }

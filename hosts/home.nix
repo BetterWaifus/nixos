@@ -1,8 +1,7 @@
-{ config, pkgs, user, ...}:
+{ config, pkgs, user, host, ...}:
 {
   imports =[
-    
-
+    # import ../modules
   ];
 
   home-manager.users.${user} = {

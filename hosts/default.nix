@@ -1,14 +1,9 @@
 { config, pkgs, user, lib, host, ...}:
 {
   imports =[
-    (import ./polybar.nix {
-      user=user;
-      pkgs=pkgs;
-      config=config;
-      lib=lib;
-      host=host;
-    })
-    
+    ./configuration.nix
+    ./home.nix
+    ../modules/polybar.nix
   ];
 
   home-manager.users.${user} = {
