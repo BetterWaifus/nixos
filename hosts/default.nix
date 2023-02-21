@@ -1,17 +1,16 @@
-{ config, pkgs, user, lib, host, ...}:
+{ config, pkgs, user, lib, host, ... }:
 {
-  imports =[
+  imports = [
     ./configuration.nix
     ./home.nix
-    ../modules/polybar.nix
   ];
 
   home-manager.users.${user} = {
 
-    home.file."wallpaper"={
-      source=./wallpaper;
-      recursive = true;
-    };
+    # home.file."wallpaper"={
+    #   source=./wallpaper;
+    #   recursive = true;
+    # };
 
     services.polybar = {
       script = "polybar";
@@ -25,35 +24,35 @@
     #services.picom = {
     #  enable = true;
 
-     # shadow = true;
-      #shadowOpacity = 0.75;
-     # shadowOffsets =
-     # [
-     #   (-7)
-     #   (-7)
-      #];
+    # shadow = true;
+    #shadowOpacity = 0.75;
+    # shadowOffsets =
+    # [
+    #   (-7)
+    #   (-7)
+    #];
 
-     # fade = true;
+    # fade = true;
     #  fadeSteps = [
     #    (0.03)
-     #   (0.03)
-     # ];
+    #   (0.03)
+    # ];
 
-     # inactiveOpacity = 0.95;
-     # activeOpacity = 1.0;
+    # inactiveOpacity = 0.95;
+    # activeOpacity = 1.0;
 
-     # backend = "glx";
+    # backend = "glx";
 
-      #settings = {
-      #  corner-radius = 10;
-      #  shadow-radius = 7;
+    #settings = {
+    #  corner-radius = 10;
+    #  shadow-radius = 7;
     #  };
-   # };
+    # };
 
     xsession.windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
-      
+
       config = {
         modifier = "Mod4";
 
@@ -75,8 +74,8 @@
           modifier = "Mod4";
         };
 
-        bars = lib.mkForce [];
-        
+        bars = lib.mkForce [ ];
+
         keybindings = lib.mkOptionDefault {
           "Mod4+Shift+S" = "exec maim -s | xclip clipboard -t image/png";
           "Mod4+d" = "exec --no-startup-id rofi -show run";

@@ -11,12 +11,14 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, lib, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
     let
-      createHost = { hostName }: lib.nixosSystem {
+      createHost = { hostName }: nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
+          inherit (nixpkgs) lib;
+          inherit inputs nixpkgs home-manager;
           user = "styley";
         };
 
@@ -28,10 +30,10 @@
       };
     in
     {
-      nixosConfigurations =  {
+      nixosConfigurations = {
         desktop = createHost { hostName = "desktop"; };
-        laptop = createHost {hostName = "laptop"; };
-        vm = createHost {hostName = "vm"; };
+        laptop = createHost { hostName = "laptop"; };
+        vm = createHost { hostName = "vm"; };
       };
     };
 }
