@@ -75,7 +75,7 @@ config = {
             notification = false;
           }
           {
-            command = "systemctl --user restart polybar.service";
+            command = lib.mkAfter "systemctl --user restart polybar.service";
             always = true;
             notification = false;
           }
