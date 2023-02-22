@@ -20,7 +20,6 @@
           inherit (nixpkgs) lib;
           inherit inputs nixpkgs home-manager;
           user = "styley";
-          font = "JetBrains Mono";
         };
 
         modules = [

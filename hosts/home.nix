@@ -1,4 +1,4 @@
-{ config, pkgs, user, host, font, ... }:
+{ config, pkgs, user, host, ... }:
 {
   imports = [
     ../modules
@@ -29,17 +29,6 @@
       maim
       light
     ];
-
-    home.file = {
-      ".config/alacritty/alacritty.yml".text = ''
-        # Font configuration
-        font:
-          normal:
-            family: ${font}
-            style: Regular
-      '';
-
-    };
 
     home.file = {
       ".config/rofi/config.rasi".text = ''

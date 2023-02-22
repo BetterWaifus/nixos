@@ -1,5 +1,6 @@
-{ config, pkgs, user, lib, host, font, ... }:
-{
+{ config, pkgs, user, lib, host, ... }:
+{ options.styley.fonts =  "JetBrains Mono";
+config = {
   imports = [
     ./configuration.nix
     ./home.nix
@@ -32,7 +33,7 @@
         window.border = 0;
 
         fonts = {
-          names = [ "${font}" ];
+          names = [ "${styley.fonts}" ];
           style = "Regular";
           size = 8.0;
         };
@@ -88,4 +89,5 @@
       };
     };
   };
+};
 }
