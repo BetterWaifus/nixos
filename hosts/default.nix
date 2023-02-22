@@ -89,7 +89,7 @@ config = {
           }
           {
             command = "systemctl --user restart polybar.service";
-            always = true;
+            always = false;
             notification = false;
           }
         ];
