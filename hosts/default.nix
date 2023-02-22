@@ -1,6 +1,6 @@
 { config, pkgs, user, lib, host, ... }:
 { options.styley.font = lib.mkOption {
-   default = "JetBrains Mono"; 
+   default = "Inter" ; 
    };
 imports = [
     ./configuration.nix
@@ -54,8 +54,8 @@ config = {
         keybindings = lib.mkOptionDefault {
           "Mod4+Shift+S" = "exec maim -s | xclip -sel clip -t image/png";
           "Mod4+d" = "exec --no-startup-id rofi -show run";
-          "XF86MonBrightnessUp" = "exec light -A 5";
-          "XF86MonBrightnessDown" = "exec light -U 5";
+          "XF86MonBrightnessUp" = "exec light -A 10";
+          "XF86MonBrightnessDown" = "exec light -U 10";
         };
 
         startup = [

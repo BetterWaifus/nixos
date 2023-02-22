@@ -86,7 +86,7 @@
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.package = pkgs.pulseaudioFull;
   hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
-  users.extraUsers.${user}.extraGroups = [ "audio" ];
+  users.extraUsers.${user}.extraGroups = [ "audio" "video" ];
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
@@ -120,6 +120,11 @@
       gparted
       alacritty
       vscode
+      roboto-mono
+      rounded-mgenplus
+      ubuntu_font_family
+      inter
+      jetbrains-mono
     ];
   };
 

@@ -20,9 +20,6 @@
       feh
       pywal
       arandr
-      jetbrains-mono
-      roboto-mono
-      inter
       i3lock
       pulseaudio
       maim

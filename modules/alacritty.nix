@@ -4,10 +4,13 @@ home-manager.users.${user} = {
     settings = {
       font = {
       normal = {
-      family = config.styley.font;
-      style = "Regular";
-
+        family = 
+        "JetBrains Mono";
+        style = "Regular";
         };
+        bold = {style = "Bold"; };
+        italic = { style = "Italic"; };
+        size = 11;
       };
      };
     };
