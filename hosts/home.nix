@@ -16,7 +16,6 @@
       nixpkgs-fmt
       xfce.thunar
       xorg.xrandr
-      polybar
       rofi
       picom
       feh
