@@ -14,7 +14,6 @@
       nix
       nil
       nixpkgs-fmt
-      xfce.thunar
       xorg.xrandr
       rofi
       picom
@@ -22,13 +21,27 @@
       pywal
       arandr
       jetbrains-mono
-      roboto
+      roboto-mono
+      inter
       i3lock
       pulseaudio
       maim
       light
       xclip
       neofetch
+      virt-manager
+      spotifyd
+      spotify-tui
+      #steam
+      #protonup-qt
+      #protontricks
+      cinnamon.nemo
+      #discord-canary
+      betterdiscordctl
+      betterdiscord-installer
+      keepass
+      looking-glass-client
+      obs-studio
     ];
 
     home.file = {
