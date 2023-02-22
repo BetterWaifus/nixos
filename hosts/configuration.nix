@@ -80,9 +80,13 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
   security.rtkit.enable = true;
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
+  nixpkgs.config.pulseaudio = true;
+
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
