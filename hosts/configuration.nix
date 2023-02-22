@@ -85,7 +85,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
-  nixpkgs.config.pulseaudio = true;
+
 
 
   # Enable touchpad support (enabled default in most desktopManager).
