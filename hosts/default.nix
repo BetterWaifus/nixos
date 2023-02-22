@@ -1,10 +1,10 @@
 { config, pkgs, user, lib, host, ... }:
 { options.styley.fonts =  "JetBrains Mono";
-config = {
-  imports = [
+imports = [
     ./configuration.nix
     ./home.nix
   ];
+config = {
 
   home-manager.users.${user} = {
 
@@ -33,7 +33,7 @@ config = {
         window.border = 0;
 
         fonts = {
-          names = [ "JetBrains Mono" ];
+          names = styley.fonts;
           style = "Regular";
           size = 8.0;
         };
