@@ -1,10 +1,10 @@
-{ pkgs, host, user, ... }: {
+{ pkgs, host, config, user, ... }: {
 home-manager.users.${user} = {
   programs.alacritty = {
     settings = {
       font = {
       normal = {
-      family = styley.font;
+      family = config.styley.font;
       style = "Regular";
 
         };

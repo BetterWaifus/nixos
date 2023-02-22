@@ -35,7 +35,7 @@ config = {
         window.border = 0;
 
         fonts = {
-          names = [ styley.font ];
+          names = [ config.styley.font ];
           style = "Regular";
           size = 8.0;
         };
