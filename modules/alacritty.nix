@@ -4,7 +4,7 @@ home-manager.users.${user} = {
     settings = {
       font = {
       normal = {
-      family = styley.fonts;
+      family = styley.font;
       style = "Regular";
 
         };

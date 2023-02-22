@@ -1,5 +1,7 @@
 { config, pkgs, user, lib, host, ... }:
-{ options.styley.fonts = lib.mkOption { "JetBrains Mono" };
+{ options.styley.font = lib.mkOption {
+   default = "JetBrains Mono"; 
+   };
 imports = [
     ./configuration.nix
     ./home.nix
@@ -33,7 +35,7 @@ config = {
         window.border = 0;
 
         fonts = {
-          names = [ styley.fonts ];
+          names = [ styley.font ];
           style = "Regular";
           size = 8.0;
         };

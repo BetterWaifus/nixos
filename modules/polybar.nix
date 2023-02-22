@@ -36,7 +36,7 @@
           separator = "|";
           separator-foreground = "\${colors.disabled}";
 
-          font-0 = "${styley.fonts}:pixelsize=12;2";
+          font-0 = "${styley.font}:pixelsize=12;2";
 
           modules-left = "xworkspaces xwindow";
           modules-right = "filesystem pulseaudio xkeyboard memory cpu wlan eth date";
