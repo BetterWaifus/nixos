@@ -39,6 +39,7 @@
       keepass
       looking-glass-client
       obs-studio
+      gnome.gnome-clocks
     ];
 
     home.file = {
