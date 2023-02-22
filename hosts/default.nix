@@ -52,7 +52,7 @@ config = {
         bars = lib.mkForce [ ];
 
         keybindings = lib.mkOptionDefault {
-          "Mod4+Shift+S" = "exec maim -s | xclip clipboard -t image/png";
+          "Mod4+Shift+S" = "exec maim -s | xclip -sel clip -t image/png";
           "Mod4+d" = "exec --no-startup-id rofi -show run";
           "XF86MonBrightnessUp" = "exec light -A 5";
           "XF86MonBrightnessDown" = "exec light -U 5";
