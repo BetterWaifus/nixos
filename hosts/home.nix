@@ -28,6 +28,7 @@
       maim
       light
       xclip
+      neofetch
     ];
 
     home.file = {

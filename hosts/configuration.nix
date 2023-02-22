@@ -84,9 +84,9 @@
   security.rtkit.enable = true;
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
   hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
-
-
+  users.extraUsers.${user}.extraGroups = [ "audio" ];
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
