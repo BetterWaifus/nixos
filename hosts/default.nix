@@ -58,7 +58,7 @@ config = {
           "XF86MonBrightnessDown" = "exec light -U 5";
         };
 
-        extraConfig = {"
+        extraConfig = "
         set_from_resource $fg i3wm.color7 #f0f0f0
         set_from_resource $bg i3wm.color2 #f0f0f0
 
@@ -70,7 +70,8 @@ config = {
         client.placeholder      $bg     $bg     $fg  $bg       $bg
 
         client.background       $bg
-        "};
+        ";
+
         startup = [
           {
             command = "systemctl --user start picom.service";

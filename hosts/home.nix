@@ -28,6 +28,7 @@
       pulseaudio
       maim
       light
+      xclip
     ];
 
     home.file = {
