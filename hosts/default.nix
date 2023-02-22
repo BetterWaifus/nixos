@@ -33,7 +33,7 @@ config = {
         window.border = 0;
 
         fonts = {
-          names = [ styley.fonts ];
+          names = [ "JetBrains Mono" ];
           style = "Regular";
           size = 8.0;
         };
