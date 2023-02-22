@@ -76,7 +76,7 @@ config = {
           }
           {
             command = "systemctl --user restart polybar.service";
-            always = false;
+            always = true;
             notification = false;
           }
         ];
