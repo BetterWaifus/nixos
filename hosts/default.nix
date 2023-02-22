@@ -16,7 +16,7 @@ config = {
      };
 
     services.polybar = {
-      script = "polybar";
+      script = "polybar &";
       enable = true;
     };
 
