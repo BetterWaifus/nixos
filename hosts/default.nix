@@ -33,7 +33,7 @@ config = {
         window.border = 0;
 
         fonts = {
-          names = [ "${styley.fonts}" ];
+          names = [ styley.fonts ];
           style = "Regular";
           size = 8.0;
         };
