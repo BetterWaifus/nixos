@@ -29,17 +29,18 @@
       virt-manager
       spotifyd
       spotify-tui
-      #steam
-      #protonup-qt
-      #protontricks
+      steam
+      protonup-qt
+      protontricks
       cinnamon.nemo
-      #discord-canary
+      discord-canary
       betterdiscordctl
       betterdiscord-installer
       keepass
       looking-glass-client
       obs-studio
       gnome.gnome-clocks
+      wineWowPackages.unstableFull
     ];
 
     home.file = {
