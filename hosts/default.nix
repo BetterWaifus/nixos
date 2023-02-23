@@ -27,7 +27,7 @@ config = {
         modifier = "Mod4";
         terminal = "alacritty";
         defaultWorkspace = "workspace number 1";
-        
+
         window.border = 0;
 
         fonts = {
@@ -52,6 +52,9 @@ config = {
           "Mod4+d" = "exec --no-startup-id rofi -show run";
           "XF86MonBrightnessUp" = "exec light -A 10";
           "XF86MonBrightnessDown" = "exec light -U 10";
+          "XF86AudioRaiseVolume" = "exec amixer set Master 1%+";
+          "XF86AudioLowerVolume" = "exec amixer set Master 1%-";
+          "XF86AudioMute" = "exec amixer set Master toggle";
         };
 
         startup = [
