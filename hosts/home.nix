@@ -30,6 +30,9 @@
       spotifyd
       spotify-tui
       steam
+      dolphin-emu
+      yuzu-early-access
+      ryujinx
       protonup-qt
       protontricks
       cinnamon.nemo
