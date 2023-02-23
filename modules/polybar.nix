@@ -143,12 +143,10 @@
           battery = "BAT1";
           adapter = "ADP1";
           poll-interval = 5;
-          format-prefix = "BAT ";
-          format-prefix-foreground = "\${colors.primary}";
           format-battery = "<label-battery>";
           label-battery = "%percentage%%";
         };
-        
+
         "module/date" = {
           type = "internal/date";
           interval = 1;
