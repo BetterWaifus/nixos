@@ -39,7 +39,7 @@
           font-0 = "${config.styley.font}:pixelsize=12;2";
 
           modules-left = "xworkspaces xwindow";
-          modules-right = "filesystem pulseaudio xkeyboard memory cpu wlan eth date";
+          modules-right = "filesystem alsa xkeyboard memory cpu wlan eth date";
 
           cursor-click = "pointer";
           cursor-scroll = "ns-resize";
@@ -80,8 +80,8 @@
           label = "%title:0:60:...%";
         };
 
-        "module/pulseaudio" = {
-          type = "internal/pulseaudio";
+        "module/alsa" = {
+          type = "internal/alsa";
 
           format-volume-prefix = "VOL ";
           format-volume-prefix-foreground = "\${colors.primary}";
