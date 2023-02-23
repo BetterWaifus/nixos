@@ -25,8 +25,9 @@ config = {
 
       config = {
         modifier = "Mod4";
-
-
+        terminal = "alacritty";
+        defaultWorkspace = "workspace number 1";
+        
         window.border = 0;
 
         fonts = {

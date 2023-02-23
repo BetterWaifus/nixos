@@ -38,7 +38,6 @@
       cinnamon.nemo
       discord-canary
       betterdiscordctl
-      betterdiscord-installer
       keepass
       looking-glass-client
       obs-studio
