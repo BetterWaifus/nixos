@@ -81,6 +81,10 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable OpenGL 32bit support
+  hardware.opengl.driSupport32Bit = true;
+
+  # Enable ALSA sound
   security.rtkit.enable = true;
   sound.enable = true;
   hardware.pulseaudio.enable = false;
