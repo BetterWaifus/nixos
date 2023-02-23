@@ -10,11 +10,6 @@ config = {
 
   home-manager.users.${user} = {
 
-     home.file."wallpaper"={
-       source= ../modules/desktop/wallpaper;
-       recursive = true;
-     };
-
     services.polybar = {
       script = "polybar &";
       enable = true;
@@ -65,12 +60,12 @@ config = {
             notification = false;
           }
           {
-            command = "${pkgs.feh}/bin/feh --bg-fill ~/wallpaper";
+            command = "${pkgs.feh}/bin/feh --bg-fill ${../modules/desktop/wallpaper}";
             always = true;
             notification = false;
           }
           {
-            command = "wal -c && wal -i ~/wallpaper";
+            command = "wal -c && wal -i ${../modules/desktop/wallpaper}";
             always = true;
             notification = false;
           }
