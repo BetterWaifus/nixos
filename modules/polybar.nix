@@ -39,7 +39,7 @@
           font-0 = "${config.styley.font}:pixelsize=12;2";
 
           modules-left = "xworkspaces xwindow";
-          modules-right = "filesystem alsa xkeyboard memory cpu wlan eth date";
+          modules-right = "filesystem alsa xkeyboard memory cpu wlan eth battery date";
 
           cursor-click = "pointer";
           cursor-scroll = "ns-resize";
@@ -136,6 +136,19 @@
           label-connected = "%essid% %local_ip%";
         };
 
+        "module/battery" = {
+          type = "internal/battery";
+          full-at = 99;
+          low-at = 5;
+          battery = "BAT1";
+          adapter = "ADP1";
+          poll-interval = 5;
+          format-prefix = "BAT ";
+          format-prefix-foreground = "\${colors.primary}";
+          format-battery = "<label-battery>";
+          label-battery = "%percentage%%";
+        };
+        
         "module/date" = {
           type = "internal/date";
           interval = 1;
