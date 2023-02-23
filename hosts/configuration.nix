@@ -83,9 +83,13 @@
 
   security.rtkit.enable = true;
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.package = pkgs.pulseaudioFull;
-  hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
+  hardware.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
   users.extraUsers.${user}.extraGroups = [ "audio" "video" ];
 
   # Enable touchpad support (enabled default in most desktopManager).
