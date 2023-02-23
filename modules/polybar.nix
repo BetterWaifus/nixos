@@ -38,8 +38,8 @@
 
           font-0 = "${config.styley.font}:pixelsize=12;2";
 
-          modules-left = "xworkspaces xwindow";
-          modules-right = "filesystem alsa xkeyboard memory cpu wlan eth battery date";
+          modules-left = "xworkspaces xwindow xkeyboard";
+          modules-right = "backlight filesystem alsa memory cpu battery date";
 
           cursor-click = "pointer";
           cursor-scroll = "ns-resize";
@@ -86,6 +86,7 @@
           format-volume-prefix = "VOL ";
           format-volume-prefix-foreground = "\${colors.primary}";
           format-volume = "<label-volume>";
+          enable-scroll = true;
 
           label-volume = "%percentage%%";
 
@@ -104,6 +105,16 @@
           label-indicator-margin = 1;
           label-indicator-foreground = "\${colors.background}";
           label-indicator-background = "\${colors.secondary}";
+        };
+
+        "module/backlight" = {
+          type = "internal/backlight";
+          card = "intel_backlight";
+          enable-scroll = true;
+          format-prefix = "☀ ";
+          format-prefix-foreground = "\${colors.primary}";
+          format = "<label>";
+          label = "%percentage%%";
         };
 
         "module/memory" = {
@@ -141,10 +152,11 @@
           full-at = 99;
           low-at = 5;
           battery = "BAT1";
-          adapter = "ADP1";
           poll-interval = 5;
-          format-battery = "<label-battery>";
-          label-battery = "%percentage%%";
+          format-prefix = "BAT ";
+          format-prefix-foreground = "\${colors.primary}";
+          format = "<label>";
+          label = "%percentage%%";
         };
 
         "module/date" = {
