@@ -7,8 +7,9 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "nodev";
-  
+
   home-manager.users.${user} = {
+
     xsession.windowManager.i3 = {
       config = {
         startup = [
@@ -21,9 +22,7 @@
       ;
     };
   };
-};
 
-  home-manager.users.${user} = {
     services.picom = {
       enable = true;
 
