@@ -36,10 +36,11 @@
           separator = "|";
           separator-foreground = "\${colors.disabled}";
 
-          font-0 = "${config.styley.font}:pixelsize=12;2";
+          font-0 = "${config.styley.font}:size=12;0";
+          font-1 = "${config.styley.monospacefont}:pixelsize=12;1";
 
           modules-left = "xworkspaces xwindow xkeyboard";
-          modules-right = "backlight filesystem alsa memory cpu battery date";
+          modules-right = "wlan lan backlight alsa battery date";
 
           cursor-click = "pointer";
           cursor-scroll = "ns-resize";
@@ -83,15 +84,17 @@
         "module/alsa" = {
           type = "internal/alsa";
 
-          format-volume-prefix = "VOL ";
-          format-volume-prefix-foreground = "\${colors.primary}";
-          format-volume = "<label-volume>";
-          enable-scroll = true;
+          format-volume = "<ramp-volume>  <label-volume>";
+            format-muted = "<label-muted>  0";
+            label-volume = "%percentage%%";
+            label-muted = " ";
+            format-volume-padding = 0;
+            format-muted-padding = 30;
 
-          label-volume = "%percentage%%";
-
-          label-muted = "muted";
-          label-muted-foreground = "\${colors.disabled}";
+            ramp-volume-0 = " ";
+            ramp-volume-1 = " ";
+            ramp-volume-2 = " ";
+            ramp-headphones-0 = " ";
         };
 
         "module/xkeyboard" = {
@@ -133,30 +136,62 @@
           label = "%percentage:2%%";
         };
 
-        network-base = {
+        "module/lan" = {
           type = "internal/network";
-          interval = "5";
-          format-connected = "<label-connected>";
-          format-disconnected = "<label-disconnected>";
-          label-disconnected = "%{F#F0C674}%ifname%%{F#707880} disconnected";
+
+          interface = "enp0s31f6";
+
+          interval = 1;
+
+          label-connected = "";
+          label-disconnected = "";
+          label-disconnected-foreground = "%{F#F0C674}%ifname%%{F#707880} disconnected";
         };
 
         "module/wlan" = {
-          "inherit" = "network-base";
-          interface-type = "wireless";
-          label-connected = "%essid% %local_ip%";
+          type = "internal/network";
+
+          interface = "wlp2s0";
+
+          interval = 1;
+
+          label-connected = "%{A:xst -e nmtui&:}直  %essid%%{A}";
+          label-disconnected = "%{A:xst -e nmtui&:}睊%{A}";
+          label-disconnected-foreground = "%{F#F0C674}%ifname%%{F#707880} disconnected";
         };
 
-        "module/battery" = {
-          type = "internal/battery";
-          full-at = 99;
-          low-at = 5;
-          battery = "BAT1";
-          poll-interval = 5;
-          format-prefix = "BAT ";
-          format-prefix-foreground = "\${colors.primary}";
-          format = "<label>";
-          label = "%percentage%%";
+       "module/battery" = {
+            type = "internal/battery";
+
+            full-at = 99;
+
+            battery = "BAT1";
+            adapter = "AC0";
+
+            poll-interval = 5;
+
+            format-charging = "<animation-charging>  <label-charging>";
+            format-discharging = "<ramp-capacity>  <label-discharging>";
+            format-full = "<ramp-capacity>  <label-full>";
+            label-charging = "%percentage%%";
+            label-discharging = "%percentage%%";
+            label-full = "%percentage%%";
+            format-charging-padding = 0;
+            format-discharging-padding = 0;
+            format-full-padding = 0;
+
+            ramp-capacity-0 = " ";
+            ramp-capacity-1 = " ";
+            ramp-capacity-2 = " ";
+            ramp-capacity-3 = " ";
+            ramp-capacity-4 = " ";
+
+            animation-charging-0 = " ";
+            animation-charging-1 = " ";
+            animation-charging-2 = " ";
+            animation-charging-3 = " ";
+            animation-charging-4 = " ";
+            animation-charging-framerate = 750;
         };
 
         "module/date" = {
