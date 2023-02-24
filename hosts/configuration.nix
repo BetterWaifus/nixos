@@ -56,6 +56,11 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Sets to nixos-unstable
+  package = pkgs.nixVersions.unstable;
+      # use flakes
+  extraOptions = "experimental-features = nix-command flakes";
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
