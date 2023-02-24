@@ -89,7 +89,7 @@
             label-volume = "%percentage%%";
             label-muted = " ";
             format-volume-padding = 0;
-            format-muted-padding = 30;
+            format-muted-padding = 0;
 
             ramp-volume-0 = " ";
             ramp-volume-1 = " ";
