@@ -55,9 +55,6 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-
-  # Sets to nixos-unstable
-  package = pkgs.nixVersions.unstable;
   
   # Enable the X11 windowing system.
   services.xserver.enable = true;
