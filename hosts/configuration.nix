@@ -184,4 +184,4 @@
     package = pkgs.nixVersions.unstable;
     # use flakes
     extraOptions = "experimental-features = nix-command flakes";
-  };
+  }
