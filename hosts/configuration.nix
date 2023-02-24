@@ -128,11 +128,20 @@
       gparted
       alacritty
       vscode
+    ];
+  };
+
+  # setup fonts
+  fonts = {
+    fonts = with pkgs; [
+      font-awesome
       roboto-mono
       rounded-mgenplus
-      ubuntu_font_family
       inter
-      jetbrains-mono
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Ubuntu" ]; })
     ];
   };
 
