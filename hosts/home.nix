@@ -31,6 +31,7 @@
       spotifyd
       spotify-tui
       steam
+      parsec-bin
       dolphin-emu
       yuzu-early-access
       ryujinx
