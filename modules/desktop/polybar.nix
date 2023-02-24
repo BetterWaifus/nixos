@@ -87,14 +87,14 @@
           format-volume = "<ramp-volume>  <label-volume>";
             format-muted = "<label-muted>  0";
             label-volume = "%percentage%%";
-            label-muted = " ";
+            label-muted = "";
             format-volume-padding = 0;
             format-muted-padding = 0;
 
-            ramp-volume-0 = " ";
-            ramp-volume-1 = " ";
-            ramp-volume-2 = " ";
-            ramp-headphones-0 = " ";
+            ramp-volume-0 = "";
+            ramp-volume-1 = "";
+            ramp-volume-2 = "";
+            ramp-headphones-0 = "";
         };
 
         "module/xkeyboard" = {
