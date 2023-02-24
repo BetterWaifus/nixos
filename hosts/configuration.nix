@@ -58,9 +58,7 @@
 
   # Sets to nixos-unstable
   package = pkgs.nixVersions.unstable;
-      # use flakes
-  extraOptions = "experimental-features = nix-command flakes";
-
+  
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -172,7 +170,7 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.11"; # Did you read the comment?
   
-  # enable flakes
+     # enable flakes
   nix = {
     settings = {
       auto-optimise-store = true; # Optimise syslinks
@@ -181,9 +179,9 @@
       # Automatic garbage collection
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 7d";
+      options = "--delete-older-than 2d";
     };
+    package = pkgs.nixVersions.unstable;
     # use flakes
     extraOptions = "experimental-features = nix-command flakes";
   };
-}
