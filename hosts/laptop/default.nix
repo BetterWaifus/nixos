@@ -7,6 +7,21 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "nodev";
+  
+  home-manager.users.${user} = {
+    xsession.windowManager.i3 = {
+      config = {
+        startup = [
+          {
+            command = "xrandr --output eDP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal --rate 60 --output HDMI-1 --off";
+            always = true;
+            notification = false;
+          }
+        ]
+      ;
+    };
+  };
+};
 
   home-manager.users.${user} = {
     services.picom = {
