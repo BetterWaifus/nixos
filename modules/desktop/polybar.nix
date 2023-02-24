@@ -115,7 +115,6 @@
           card = "intel_backlight";
           enable-scroll = true;
           format-prefix = "☀ ";
-          format-prefix-foreground = "\${colors.primary}";
           format = "<label>";
           label = "%percentage%%";
         };
