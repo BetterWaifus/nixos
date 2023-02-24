@@ -54,7 +54,7 @@
     };
 
     home.file."./.bashrc" = {
-      source=../modules/bashrc/bashrc.conf;
+      source=../modules/programs/bashrc/bashrc.conf;
       recursive = true;
     };
   };

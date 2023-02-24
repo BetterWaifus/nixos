@@ -1,5 +1,5 @@
 { pkgs, host, user, ... }: {
   imports = [
-    ./polybar.nix
+    ./desktop/polybar.nix
   ];
 }
