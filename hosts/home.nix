@@ -2,6 +2,7 @@
 {
   imports = [
     ../modules
+    ../modules/programs/alacritty.nix
   ];
 
   home-manager.users.${user} = {

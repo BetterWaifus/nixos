@@ -2,6 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/zfs.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
