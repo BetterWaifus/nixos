@@ -84,6 +84,9 @@
   # Enable OpenGL 32bit support
   hardware.opengl.driSupport32Bit = true;
 
+  # shut sudo up
+  security.sudo.extraConfig = "Defaults lecture=never";
+
   # Enable ALSA sound
   security.rtkit.enable = true;
   sound.enable = true;
