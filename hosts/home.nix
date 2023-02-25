@@ -52,11 +52,25 @@
        /* Dark theme. */
        @import "~/.cache/wal/colors-rofi-dark"
       '';
-
     };
 
     home.file."./.bashrc" = {
       source=../modules/programs/bashrc/bashrc.conf;
+      recursive = true;
+    };
+
+    home.file."./.config/spotifyd/spotifyd.conf" = {
+      source=../modules/programs/spotifyd/spotifyd.conf;
+      recursive = true;
+    };
+
+    home.file."./.config/spotify-tui/.spotify_token_cache.json" = {
+      source=../modules/programs/spotify-tui/.spotify_token_cache.json;
+      recursive = true;
+    };
+
+    home.file."./.config/spotify-tui/client.yml" = {
+      source=../modules/programs/spotify-tui/client.yml;
       recursive = true;
     };
   };
