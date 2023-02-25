@@ -85,9 +85,10 @@
           type = "internal/alsa";
 
           format-volume = "<ramp-volume>  <label-volume>";
-            format-muted = "<label-muted>  0";
+            format-muted = "<label-muted>  MUTE";
             label-volume = "%percentage%%";
             label-muted = "";
+            label-muted-foreground = "\${colors.disabled}";
             format-volume-padding = 0;
             format-muted-padding = 0;
 
