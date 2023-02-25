@@ -12,12 +12,12 @@
     xsession.windowManager.i3 = {
       startup = [
         {
-            command = "${pkgs.feh}/bin/feh --bg-fill ${../modules/desktop/wallpaper/vm}";
+            command = "${pkgs.feh}/bin/feh --bg-fill ${../../modules/desktop/wallpaper/vm}";
             always = true;
             notification = false;
           }
           {
-            command = "wal -c && wal -i ${../modules/desktop/wallpaper/vm}";
+            command = "wal -c && wal -i ${../../modules/desktop/wallpaper/vm}";
             always = true;
             notification = false;
           }
