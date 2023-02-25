@@ -6,7 +6,7 @@ home-manager.users.${user} = {
       font = {
       normal = {
         family = 
-        "JetBrains Mono";
+        "${config.styley.monospacefont}";
         style = "Regular";
         };
         bold = {style = "Bold"; };
