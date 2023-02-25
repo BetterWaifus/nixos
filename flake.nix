@@ -11,7 +11,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, agenix, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
     let
       createHost = { hostName }: nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -30,12 +30,7 @@
       };
     in
     {
-      nixosConfigurations = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        agenix.nixosModules.default
-      ];
+      nixosConfigurations = {
         desktop = createHost { hostName = "desktop"; };
         laptop = createHost { hostName = "laptop"; };
         vm = createHost { hostName = "vm"; };
