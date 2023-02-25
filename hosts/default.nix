@@ -78,16 +78,6 @@ config = {
             notification = false;
           }
           {
-            command = "${pkgs.feh}/bin/feh --bg-fill ${../modules/desktop/wallpaper}";
-            always = true;
-            notification = false;
-          }
-          {
-            command = "wal -c && wal -i ${../modules/desktop/wallpaper}";
-            always = true;
-            notification = false;
-          }
-          {
             command = lib.mkAfter "systemctl --user restart polybar.service";
             always = true;
             notification = false;

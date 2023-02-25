@@ -11,6 +11,19 @@
   home-manager.users.${user} = {
 
     xsession.windowManager.i3 = {
+      startup = [
+        {
+            command = "${pkgs.feh}/bin/feh --bg-fill ${../modules/desktop/wallpaper/laptop}";
+            always = true;
+            notification = false;
+          }
+          {
+            command = "wal -c && wal -i ${../modules/desktop/wallpaper/laptop}";
+            always = true;
+            notification = false;
+          }
+      ];
+
       config = {
         startup = [
           {
