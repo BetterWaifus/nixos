@@ -14,10 +14,6 @@
         name = "Papirus-Dark";
         package = pkgs.papirus-icon-theme;
       };
-      font = {
-        name = "${config.styley.font} Regular";
-        package = pkgs.inter;
-      };
       gtk3 = {
         extraConfig = {
           gtk-application-prefer-dark-theme = 1;

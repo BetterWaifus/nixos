@@ -3,7 +3,6 @@
   imports = [
     ../modules
     ../modules/programs/alacritty.nix
-    ../modules/programs/firefox.nix
     ../modules/programs/nemo.nix
     ../modules/desktop/gtk.nix
   ];
@@ -13,6 +12,7 @@
     nixpkgs.config.allowUnfree = true;
     home.packages = with pkgs; [
       vscode
+      firefox
       nix
       nil
       nixpkgs-fmt
