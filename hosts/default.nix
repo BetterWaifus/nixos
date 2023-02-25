@@ -31,6 +31,17 @@ config = {
         terminal = "alacritty";
         defaultWorkspace = "workspace number 1";
 
+        workspaceOutputAssign = [
+        {
+          workspace = "1";
+          output = "DP-4";
+        }
+        {
+          workspace = "2";
+          output = "DP-2";
+        }
+        ];
+
         window.border = 0;
 
         fonts = {
