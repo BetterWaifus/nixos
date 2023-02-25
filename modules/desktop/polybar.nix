@@ -15,7 +15,7 @@
 
         "bar/example" = {
           width = "100%";
-          height = "18pt";
+          height = "16pt";
           radius = 0;
 
           # dpi = 96;
@@ -33,11 +33,11 @@
 
           module-margin = 1;
 
-          separator = "|";
+          separator = " ";
           separator-foreground = "\${colors.disabled}";
 
-          font-0 = "${config.styley.font}:size=12;0";
-          font-1 = "${config.styley.monospacefont}:pixelsize=12;1";
+          font-0 = "${config.styley.font}:size=12;3";
+          font-1 = "${config.styley.monospacefont}:pixelsize=12;3";
 
           modules-left = "xworkspaces xwindow xkeyboard";
           modules-right = "wlan lan backlight alsa battery date";
