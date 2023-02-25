@@ -11,23 +11,20 @@
   home-manager.users.${user} = {
 
     xsession.windowManager.i3 = {
-      startup = [
-        {
+      config = {
+        startup = [
+          {
+            command = "xrandr --output eDP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal --rate 60 --output HDMI-1 --off";
+            always = true;
+            notification = false;
+          }
+          {
             command = "${pkgs.feh}/bin/feh --bg-fill ${../../modules/desktop/wallpaper/laptop}";
             always = true;
             notification = false;
           }
           {
             command = "wal -c && wal -i ${../../modules/desktop/wallpaper/laptop}";
-            always = true;
-            notification = false;
-          }
-      ];
-
-      config = {
-        startup = [
-          {
-            command = "xrandr --output eDP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal --rate 60 --output HDMI-1 --off";
             always = true;
             notification = false;
           }
