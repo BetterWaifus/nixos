@@ -1,6 +1,7 @@
 { pkgs, host, config, user, ... }: {
 home-manager.users.${user} = {
   programs.alacritty = {
+    enable = true;
     settings = {
       font = {
       normal = {

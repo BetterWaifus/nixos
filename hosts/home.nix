@@ -3,15 +3,16 @@
   imports = [
     ../modules
     ../modules/programs/alacritty.nix
+    ../modules/programs/firefox.nix
+    ../modules/programs/nemo.nix
+    ../modules/desktop/gtk.nix
   ];
 
   home-manager.users.${user} = {
     home.stateVersion = "22.11";
     nixpkgs.config.allowUnfree = true;
     home.packages = with pkgs; [
-      alacritty
       vscode
-      firefox
       nix
       nil
       nixpkgs-fmt
