@@ -39,7 +39,7 @@
           font-0 = "${config.styley.font}:size=12;3";
           font-1 = "${config.styley.monospacefont}:pixelsize=12;3";
 
-          modules-left = "xworkspaces xwindow xkeyboard";
+          modules-left = "xworkspaces xwindow";
           modules-right = "wlan lan backlight alsa battery date";
 
           cursor-click = "pointer";
