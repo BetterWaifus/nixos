@@ -83,7 +83,17 @@ config = {
             notification = false;
           }
           {
+            command = lib.mkAfter "exec ${../modules/scripts/set-config.sh}";
+            always = true;
+            notification = false;
+          }
+          {
             command = lib.mkAfter "exec --no-startup-id betterdiscordctl -f canary install";
+            always = true;
+            notification = false;
+          }
+          {
+            command = lib.mkAfter "exec ${../modules/desktop/pywal/pywal-discord/install}";
             always = true;
             notification = false;
           }
