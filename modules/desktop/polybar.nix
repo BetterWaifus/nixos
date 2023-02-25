@@ -15,7 +15,7 @@
 
         "bar/example" = {
           width = "100%";
-          height = "16pt";
+          height = "18pt";
           radius = 0;
 
           # dpi = 96;
