@@ -56,5 +56,15 @@
       source=../modules/programs/bashrc/bashrc.conf;
       recursive = true;
     };
+
+    home.file.".config/BetterDiscord/themes/pywal-discord-abou.css" = {
+      source=../modules/programs/pywal-discord/pywal-discord-abou.css;
+      recursive = true;
+    };
+
+    home.file.".config/BetterDiscord/themes/pywal-discord-default.css" = {
+      source=../modules/programs/pywal-discord/pywal-discord-default.css;
+      recursive = true;
+    };
   };
 }

@@ -82,6 +82,11 @@ config = {
             always = true;
             notification = false;
           }
+           {
+            command = lib.mkAfter "exec betterdiscordctl -f canary install";
+            always = true;
+            notification = false;
+          }
         ];
       };
 
