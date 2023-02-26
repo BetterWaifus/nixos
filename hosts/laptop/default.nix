@@ -8,7 +8,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
-  boot.initrd.postDeviceCommands = lib.mkAfter "zfs rollback -r zroot/local/root@blank";
 
   home-manager.users.${user} = {
 
