@@ -3,7 +3,7 @@
     ./desktop/polybar.nix
     ./desktop/gtk.nix
     ./impermanence.nix
-    ./media.nix
+    ./home_folders.nix
     ./programs/alacritty.nix
     ./programs/nemo.nix
     ./programs/firefox.nix
