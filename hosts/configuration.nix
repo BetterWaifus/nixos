@@ -78,6 +78,9 @@
     xkbVariant = "";
   };
 
+  # Enables automatic gnome-keyring unlock
+  security.pam.services.gdm.enableGnomeKeyring = true;
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
