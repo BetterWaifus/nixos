@@ -1,8 +1,15 @@
 { pkgs, user, ... }: {
   home-manager.users.${user} = {
     home = { packages = with pkgs; [ cinnamon.nemo rar ]; };
+
+    gtk.gtk3.bookmarks = [
+      "file:///home/${user}/Downloads"
+      "file:///home/${user}/Documents"
+      "file:///home/${user}/Pictures"
+      "file:///persist"
+    ];
+
     dconf.settings = {
-      # fix open in terminal
       "org/gnome/desktop/applications/terminal" = {
         exec = "alacritty";
       };
@@ -21,4 +28,7 @@
       };
     };
   };
+
+  styley.persist.home.directories = [
+  ];
 }

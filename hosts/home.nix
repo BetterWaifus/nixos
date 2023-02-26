@@ -4,7 +4,15 @@
     ../modules
     ../modules/programs/alacritty.nix
     ../modules/programs/nemo.nix
-    ../modules/desktop/gtk.nix
+    ../modules/desktop/impermanence.nix
+    ../modules/desktop/firefox.nix
+    ../modules/desktop/vscode.nix
+    ../modules/desktop/nixos.nix
+    ../modules/desktop/betterdiscord.nix
+    ../modules/desktop/discordcanary.nix
+    ../modules/desktop/share.nix
+    ../modules/desktop/steam.nix
+    ../modules/desktop/git.nix
   ];
 
   home-manager.users.${user} = {
