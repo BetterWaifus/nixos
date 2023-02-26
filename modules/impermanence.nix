@@ -46,7 +46,6 @@ config = {
         files = cfg.home.files;
         directories = [
           # TODO: reference projects on another dataset?
-          "projects"
         ] ++ cfg.home.directories;
       };
     };

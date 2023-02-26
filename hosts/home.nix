@@ -13,7 +13,7 @@
     ../modules/programs/share.nix
     ../modules/programs/steam.nix
     ../modules/programs/git.nix
-    ../modules/programs/keyring.nix
+    ../modules/programs/heroic.nix
   ];
 
   home-manager.users.${user} = {
@@ -51,8 +51,10 @@
       keepass
       obs-studio
       gnome.gnome-clocks
-      wineWowPackages.unstableFull
       gnome.seahorse
+      winetricks
+      wine-staging
+      heroic
     ];
 
     home.file = {
