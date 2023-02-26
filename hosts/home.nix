@@ -52,6 +52,7 @@
       obs-studio
       gnome.gnome-clocks
       wineWowPackages.unstableFull
+      gnome.seahorse
     ];
 
     home.file = {
