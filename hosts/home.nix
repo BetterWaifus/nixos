@@ -2,17 +2,17 @@
 {
   imports = [
     ../modules
+    ../modules/impermanence.nix
     ../modules/programs/alacritty.nix
     ../modules/programs/nemo.nix
-    ../modules/desktop/impermanence.nix
-    ../modules/desktop/firefox.nix
-    ../modules/desktop/vscode.nix
-    ../modules/desktop/nixos.nix
-    ../modules/desktop/betterdiscord.nix
-    ../modules/desktop/discordcanary.nix
-    ../modules/desktop/share.nix
-    ../modules/desktop/steam.nix
-    ../modules/desktop/git.nix
+    ../modules/programs/firefox.nix
+    ../modules/programs/vscode.nix
+    ../modules/programs/nixos.nix
+    ../modules/programs/betterdiscord.nix
+    ../modules/programs/discordcanary.nix
+    ../modules/programs/share.nix
+    ../modules/programs/steam.nix
+    ../modules/programs/git.nix
   ];
 
   home-manager.users.${user} = {
