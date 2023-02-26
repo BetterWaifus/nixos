@@ -14,6 +14,7 @@
     ../modules/programs/steam.nix
     ../modules/programs/git.nix
     ../modules/programs/heroic.nix
+    ../modules/programs/keyring.nix
   ];
 
   home-manager.users.${user} = {
