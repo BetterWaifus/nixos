@@ -7,6 +7,6 @@
     styley.persist.home.files = [
       ".steampath"
       ".steampid"
-    ]
+    ];
   };
 }
