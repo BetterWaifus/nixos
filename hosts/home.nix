@@ -13,6 +13,7 @@
     ../modules/programs/share.nix
     ../modules/programs/steam.nix
     ../modules/programs/git.nix
+    ../modules/programs/keyring.nix
   ];
 
   home-manager.users.${user} = {
