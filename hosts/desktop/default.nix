@@ -37,7 +37,7 @@
   services.picom = {
       enable = true;
 
-      vSync = true;
+      vSync = false;
 
      shadow = true;
     shadowOpacity = 0.75;
