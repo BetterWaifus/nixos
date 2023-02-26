@@ -43,18 +43,18 @@
       #dolphin-emu
       #yuzu-early-access
       #ryujinx
-      protonup-qt
-      protontricks
+      #protonup-qt
+      #protontricks
       cinnamon.nemo
       #discord-canary
       #betterdiscordctl
-      keepass
-      obs-studio
-      gnome.gnome-clocks
-      gnome.seahorse
-      winetricks
-      wine-staging
-      heroic
+      #keepass
+      #obs-studio
+      #gnome.gnome-clocks
+      #gnome.seahorse
+      #winetricks
+      #wine-staging
+      #heroic
     ];
 
     home.file = {
