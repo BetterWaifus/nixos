@@ -38,16 +38,16 @@
       xclip
       neofetch
       virt-manager
-      steam
-      parsec-bin
-      dolphin-emu
-      yuzu-early-access
-      ryujinx
+      #steam
+      #parsec-bin
+      #dolphin-emu
+      #yuzu-early-access
+      #ryujinx
       protonup-qt
       protontricks
       cinnamon.nemo
-      discord-canary
-      betterdiscordctl
+      #discord-canary
+      #betterdiscordctl
       keepass
       obs-studio
       gnome.gnome-clocks
