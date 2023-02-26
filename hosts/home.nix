@@ -2,19 +2,6 @@
 {
   imports = [
     ../modules
-    ../modules/impermanence.nix
-    ../modules/programs/alacritty.nix
-    ../modules/programs/nemo.nix
-    ../modules/programs/firefox.nix
-    ../modules/programs/vscode.nix
-    ../modules/programs/nixos.nix
-    ../modules/programs/betterdiscord.nix
-    ../modules/programs/discordcanary.nix
-    ../modules/programs/share.nix
-    ../modules/programs/steam.nix
-    ../modules/programs/git.nix
-    ../modules/programs/heroic.nix
-    ../modules/programs/keyring.nix
   ];
 
   home-manager.users.${user} = {
