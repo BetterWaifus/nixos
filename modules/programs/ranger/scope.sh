@@ -1,0 +1,1 @@
+/home/styley/dotfiles/ranger/scope.sh

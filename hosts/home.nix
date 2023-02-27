@@ -43,6 +43,7 @@
       winetricks
       wine-staging
       heroic
+      ranger
     ];
 
     home.file = {
@@ -64,6 +65,11 @@
 
     home.file.".config/BetterDiscord/themes/pywal-discord-default.css" = {
       source=../modules/programs/pywal-discord/pywal-discord-default.css;
+      recursive = true;
+    };
+
+    home.".config/ranger" = {
+      source=../modules/programs/ranger;
       recursive = true;
     };
   };
