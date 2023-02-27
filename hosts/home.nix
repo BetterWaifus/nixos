@@ -47,6 +47,7 @@
       nixpkgs-fmt
       nil
       zip
+      qbittorrent
     ];
 
     home.file = {
