@@ -46,7 +46,6 @@
       ranger
       nixpkgs-fmt
       nil
-      waifu2x-converter-cpp
     ];
 
     home.file = {
