@@ -6,6 +6,7 @@
       "file:///home/${user}/Downloads"
       "file:///home/${user}/Documents"
       "file:///home/${user}/Pictures"
+      "file:///home/${user}/nixos"
       "file:///persist"
     ];
 
