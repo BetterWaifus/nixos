@@ -46,6 +46,7 @@
       ranger
       nixpkgs-fmt
       nil
+      zip
     ];
 
     home.file = {
