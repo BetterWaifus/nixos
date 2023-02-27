@@ -68,7 +68,7 @@
       recursive = true;
     };
 
-    home.".config/ranger" = {
+    home.file.".config/ranger" = {
       source=../modules/programs/ranger;
       recursive = true;
     };
