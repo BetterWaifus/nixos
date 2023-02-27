@@ -1,4 +1,4 @@
-{ pkgs, host, config, user, ... }: 
+{ pkgs, host, config, user, ... }:
 let
   # create a fake gnome-terminal shell script so xdg terminal applications
   # will open in alacritty
@@ -15,22 +15,22 @@ let
 in
 {
   environment.systemPackages = [ fakeGnomeTerminal ];
-  
+
   home-manager.users.${user} = {
     programs.alacritty = {
       enable = true;
       settings = {
         font = {
-        normal = {
-          family = 
-          "${config.styley.monospacefont}";
-          style = "Regular";
+          normal = {
+            family =
+              "${config.styley.monospacefont}";
+            style = "Regular";
           };
-          bold = {style = "Bold"; };
+          bold = { style = "Bold"; };
           italic = { style = "Italic"; };
           size = 11;
         };
       };
-      };
     };
+  };
 }

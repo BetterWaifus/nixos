@@ -50,28 +50,28 @@
 
     home.file = {
       ".config/rofi/config.rasi".text = ''
-       /* Dark theme. */
-       @import "~/.cache/wal/colors-rofi-dark"
+        /* Dark theme. */
+        @import "~/.cache/wal/colors-rofi-dark"
       '';
     };
 
     home.file."./.bashrc" = {
-      source=../modules/programs/bashrc/bashrc.conf;
+      source = ../modules/programs/bashrc/bashrc.conf;
       recursive = true;
     };
 
     home.file.".config/BetterDiscord/themes/pywal-discord-abou.css" = {
-      source=../modules/programs/pywal-discord/pywal-discord-abou.css;
+      source = ../modules/programs/pywal-discord/pywal-discord-abou.css;
       recursive = true;
     };
 
     home.file.".config/BetterDiscord/themes/pywal-discord-default.css" = {
-      source=../modules/programs/pywal-discord/pywal-discord-default.css;
+      source = ../modules/programs/pywal-discord/pywal-discord-default.css;
       recursive = true;
     };
 
     home.file.".config/ranger" = {
-      source=../modules/programs/ranger;
+      source = ../modules/programs/ranger;
       recursive = true;
     };
   };

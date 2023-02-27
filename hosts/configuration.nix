@@ -17,26 +17,26 @@
 
   # systemd
   systemd = {
-   # user.services.polybar = {
-   #   Unit.After = [ "graphical-session-i3.target" ];
+    # user.services.polybar = {
+    #   Unit.After = [ "graphical-session-i3.target" ];
     #  "Install.WantedBy" = lib.mkForce [ "graphical-session-i3.target" ];
     #};
 
 
-  #user.services.polkit-gnome-authentication-agent-1 = {
-   # description = "polkit-gnome-authentication-agent-1";
-   # wantedBy = [ "graphical-session.target" ];
-   # wants = [ "graphical-session.target" ];
-   # after = [ "graphical-session.target" ];
-   # serviceConfig = {
-   #     Type = "simple";
+    #user.services.polkit-gnome-authentication-agent-1 = {
+    # description = "polkit-gnome-authentication-agent-1";
+    # wantedBy = [ "graphical-session.target" ];
+    # wants = [ "graphical-session.target" ];
+    # after = [ "graphical-session.target" ];
+    # serviceConfig = {
+    #     Type = "simple";
     #    ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
     #    Restart = "on-failure";
     #    RestartSec = 1;
     #    TimeoutStopSec = 10;
     #  };
- # };
-};
+    # };
+  };
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -55,7 +55,7 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -115,7 +115,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
- # List packages installed in system profile. To search, run:
+  # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment = {
     variables = {
@@ -152,10 +152,10 @@
   };
 
   programs.light = {
-      enable = true;
-    };
+    enable = true;
+  };
 
-  programs.steam.enable=true;
+  programs.steam.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -183,7 +183,7 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.11"; # Did you read the comment?
-  
+
   # enable flakes
   nix = {
     settings = {

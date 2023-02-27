@@ -27,9 +27,8 @@
             always = true;
             notification = false;
           }
-        ]
-      ;
+        ];
+      };
     };
   };
-};
 }

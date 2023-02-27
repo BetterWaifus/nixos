@@ -2,7 +2,7 @@
 {
   config = {
     styley.persist.root.directories = [
-     "etc/NetworkManager"
+      "etc/NetworkManager"
     ];
   };
 }

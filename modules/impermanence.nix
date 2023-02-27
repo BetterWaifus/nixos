@@ -1,6 +1,7 @@
 { config, pkgs, user, lib, inputs, ... }:
 let cfg = config.styley.persist; in
-{  options.styley.persist = {
+{
+  options.styley.persist = {
     root = {
       directories = lib.mkOption {
         default = [ ];
@@ -23,17 +24,17 @@ let cfg = config.styley.persist; in
     };
   };
 
-config = {
+  config = {
 
-  boot.initrd.postDeviceCommands = lib.mkAfter "zfs rollback -r zroot/local/root@blank";
-  
-  fileSystems."/persist".neededForBoot = true;
+    boot.initrd.postDeviceCommands = lib.mkAfter "zfs rollback -r zroot/local/root@blank";
 
-  users.mutableUsers = false;
-  # mkpasswd -m sha-512 'MY_ROOT_PASSWORD' | sudo tee -a /persist/passwords/root
-  users.users.root.passwordFile = "/persist/passwords/root";
-  # mkpasswd -m sha-512 'USER_PASSWORD' | sudo tee -a /persist/passwords/PUT_USER_NAME
-  users.users.${user}.passwordFile = "/persist/passwords/${user}";
+    fileSystems."/persist".neededForBoot = true;
+
+    users.mutableUsers = false;
+    # mkpasswd -m sha-512 'MY_ROOT_PASSWORD' | sudo tee -a /persist/passwords/root
+    users.users.root.passwordFile = "/persist/passwords/root";
+    # mkpasswd -m sha-512 'USER_PASSWORD' | sudo tee -a /persist/passwords/PUT_USER_NAME
+    users.users.${user}.passwordFile = "/persist/passwords/${user}";
 
     # persist files on root filesystem
     environment.persistence."/persist" = {
@@ -50,6 +51,6 @@ config = {
       };
     };
 
-};
+  };
 
 }

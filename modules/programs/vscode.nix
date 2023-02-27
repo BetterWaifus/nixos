@@ -2,8 +2,8 @@
 {
   config = {
     styley.persist.home.directories = [
-     ".config/Code"
-     ".vscode"
+      ".config/Code"
+      ".vscode"
     ];
   };
 }
