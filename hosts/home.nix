@@ -44,6 +44,8 @@
       wine-staging
       heroic
       ranger
+      nixpkgs-fmt
+      nil
     ];
 
     home.file = {
