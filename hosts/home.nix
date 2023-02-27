@@ -46,7 +46,6 @@
       ranger
       nixpkgs-fmt
       nil
-      unar
     ];
 
     home.file = {
