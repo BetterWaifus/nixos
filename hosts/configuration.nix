@@ -111,6 +111,12 @@
     trim.enable = true;
   };
 
+  # zfs autosnapshot
+  services.zfs.autoSnapshot.monthly = 3;
+  services.zfs.autoSnapshot.weekly = 6;
+  services.zfs.autoSnapshot.daily = 20;
+  services.zfs.autoSnapshot.hourly = 50;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user} = {
     isNormalUser = true;
