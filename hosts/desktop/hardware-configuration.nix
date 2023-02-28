@@ -11,14 +11,8 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  # Enables extra ZFS drives
-  boot.zfs.extraPools =
-    [
-      "/zfs-pool-2TB_SSHD"
-      "media/2TB_SSHD"
-    ];
   fileSystems."/media/2TB_SSHD" = {
-    device = "/zfs-pool-2TB_SSHD/media/2TB_SSHD";
+    device = "zfs-pool-2TB_SSHD/media/2TB_SSHD";
     fsType = "zfs";
   };
 
