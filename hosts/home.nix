@@ -47,7 +47,7 @@
       nixpkgs-fmt
       nil
       zip
-      qbittorrent
+      transmission
     ];
 
     home.file = {
