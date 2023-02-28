@@ -14,7 +14,7 @@
   # Enables extra ZFS drives
   boot.zfs.extraPools =
     [
-      "zfs-pool-2TB_SSHD"
+      "/zfs-pool-2TB_SSHD"
       "media/2TB_SSHD"
     ];
   fileSystems."/media/2TB_SSHD" = {
