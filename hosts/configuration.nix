@@ -105,6 +105,12 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
+  # zfs examines all data in the specified pools to verify that it checksums correctly.
+  services.zfs = {
+    autoScrub.enable = true;
+    trim.enable = true;
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user} = {
     isNormalUser = true;
