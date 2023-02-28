@@ -18,5 +18,6 @@
     ./programs/keyring.nix
     ./programs/networkmanager.nix
     ./programs/transmission.nix
+    ./programs/transmission-remote-gtk.nix
   ];
 }
