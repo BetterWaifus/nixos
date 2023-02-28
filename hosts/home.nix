@@ -48,6 +48,7 @@
       nil
       zip
       transmission
+      vlc
     ];
 
     home.file = {
