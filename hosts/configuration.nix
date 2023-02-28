@@ -111,11 +111,28 @@
     trim.enable = true;
   };
 
-  # zfs autosnapshot
-  services.zfs.autoSnapshot.monthly = 3;
-  services.zfs.autoSnapshot.weekly = 6;
-  services.zfs.autoSnapshot.daily = 20;
-  services.zfs.autoSnapshot.hourly = 50;
+  # Sanoid is a snapshotting tool for ZFS
+  services.sanoid = {
+    enable = true;
+    datasets."zfs-pool-2TB_SSHD/media" = {
+      hourly = 50;
+      daily = 20;
+      weekly = 6;
+      monthly = 3;
+    };
+    datasets."zfs-pool-2TB_SSHD/media/2TB_SSHD" = {
+      hourly = 50;
+      daily = 20;
+      weekly = 6;
+      monthly = 3;
+    };
+    datasets."zroot/safe" = {
+      hourly = 50;
+      daily = 20;
+      weekly = 6;
+      monthly = 3;
+    };
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user} = {
@@ -146,6 +163,7 @@
       gparted
       alacritty
       vscode
+      sanoid
     ];
   };
 
