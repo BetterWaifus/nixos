@@ -17,5 +17,6 @@
     ./programs/heroic.nix
     ./programs/keyring.nix
     ./programs/networkmanager.nix
+    ./programs/transmission.nix
   ];
 }
