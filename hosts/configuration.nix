@@ -111,6 +111,12 @@
     trim.enable = true;
   };
 
+  # Better lock screen
+  services.betterlockscreen = {
+    enable = true;
+    arguments = [ ];
+  };
+
   # Sanoid is a snapshotting tool for ZFS
   # How to format drives to ZFS:
   # 1. Wipe drive using GParted
