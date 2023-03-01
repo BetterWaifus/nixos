@@ -20,7 +20,6 @@
       feh
       pywal
       arandr
-      i3lock
       pulseaudio
       maim
       light
@@ -47,6 +46,7 @@
       nil
       zip
       vlc
+      i3lock-color
     ];
 
     home.file = {

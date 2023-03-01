@@ -10,6 +10,7 @@
   boot.loader.efi.efiSysMountPoint = "/boot";
 
   home-manager.users.${user} = {
+
     xsession.windowManager.i3 = {
       config = {
         startup = [

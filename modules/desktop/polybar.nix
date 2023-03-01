@@ -40,7 +40,7 @@
           font-1 = "${config.styley.monospacefont}:pixelsize=12;3";
 
           modules-left = "xworkspaces xwindow";
-          modules-right = "wlan lan backlight alsa battery date";
+          modules-right = "wlan lan backlight volume battery date";
 
           cursor-click = "pointer";
           cursor-scroll = "ns-resize";
@@ -81,7 +81,7 @@
           label = "%title:0:60:...%";
         };
 
-        "module/alsa" = {
+        "module/volume" = {
           type = "internal/alsa";
 
           format-volume = "<ramp-volume>  <label-volume>";
