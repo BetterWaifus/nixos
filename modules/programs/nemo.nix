@@ -5,6 +5,7 @@
     gtk.gtk3.bookmarks = [
       "file:///home/${user}/Downloads"
       "file:///home/${user}/Documents"
+      "file:///home/${user}/Documents/Apps"
       "file:///home/${user}/Pictures"
       "file:///home/${user}/nixos"
       "file:///persist"
