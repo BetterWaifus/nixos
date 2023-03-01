@@ -6,6 +6,12 @@
 
   home-manager.users.${user} = {
     home.stateVersion = "22.11";
+
+    services.betterlockscreen = {
+      enable = true;
+      arguments = [ ];
+    };
+
     nixpkgs.config.allowUnfree = true;
     home.packages = with pkgs; [
       vscode
