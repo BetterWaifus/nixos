@@ -43,7 +43,6 @@
       winetricks
       wine-staging
       heroic
-      ranger
       nixpkgs-fmt
       nil
       zip
@@ -71,11 +70,6 @@
 
     home.file.".config/BetterDiscord/themes/pywal-discord-default.css" = {
       source = ../modules/programs/pywal-discord/pywal-discord-default.css;
-      recursive = true;
-    };
-
-    home.file.".config/ranger" = {
-      source = ../modules/programs/ranger;
       recursive = true;
     };
   };
