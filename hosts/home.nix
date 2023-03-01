@@ -44,8 +44,6 @@
       nixpkgs-fmt
       nil
       zip
-      transmission
-      transmission-remote-gtk
       vlc
     ];
 
