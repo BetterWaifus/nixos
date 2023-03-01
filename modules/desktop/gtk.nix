@@ -6,6 +6,14 @@
 
     gtk = {
       enable = true;
+      theme = {
+        name = "Catppuccin-Mocha-Compact-Sky-Dark";
+        package = pkgs.catppuccin-gtk.override {
+          accents = [ "sky" ];
+          variant = "mocha";
+          size = "compact";
+        };
+      };
       iconTheme = {
         name = "Papirus-Dark";
         package = pkgs.papirus-icon-theme;
