@@ -64,6 +64,10 @@
         ];
 
         shadow-radius = 7;
+
+        opacity-rule = [
+          "100:name *= 'LimbusCompany'"
+        ];
       };
     };
 
