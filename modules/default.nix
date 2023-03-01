@@ -2,6 +2,7 @@
   imports = [
     ./desktop/polybar.nix
     ./desktop/gtk.nix
+    ./desktop/feh.nix
     ./impermanence.nix
     ./home_folders.nix
     ./programs/alacritty.nix

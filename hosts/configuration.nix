@@ -172,6 +172,7 @@
       vscode
       sanoid
       appimage-run
+      betterlockscreen
     ];
   };
 
