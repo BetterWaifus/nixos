@@ -39,6 +39,7 @@
       obs-studio
       gnome.gnome-clocks
       gnome.seahorse
+      gnome.eog
       winetricks
       wine-staging
       heroic
