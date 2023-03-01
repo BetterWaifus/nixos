@@ -171,6 +171,7 @@
       alacritty
       vscode
       sanoid
+      appimage-run
     ];
   };
 
