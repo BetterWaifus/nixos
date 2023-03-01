@@ -11,6 +11,11 @@
 
   home-manager.users.${user} = {
 
+    services.betterlockscreen = {
+      enable = true;
+      arguments = [ ];
+    };
+
     xsession.windowManager.i3 = {
       config = {
         startup = [
