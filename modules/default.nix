@@ -14,6 +14,7 @@
     ./programs/git.nix
     ./programs/heroic.nix
     ./programs/keyring.nix
+    ./programs/appimage-run.nix
     ./programs/networkmanager.nix
     ./programs/transmission.nix
     ./programs/transmission-remote-gtk.nix
