@@ -15,10 +15,6 @@
       nil
       nixpkgs-fmt
       xorg.xrandr
-      rofi
-      picom
-      feh
-      pywal
       arandr
       pulseaudio
       maim
@@ -50,14 +46,9 @@
       xfce.xfce4-taskmanager
       xfce.xfce4-power-manager
       gimp-with-plugins
+      pywal
+      rofi
     ];
-
-    home.file = {
-      ".config/rofi/config.rasi".text = ''
-        /* Dark theme. */
-        @import "~/.cache/wal/colors-rofi-dark"
-      '';
-    };
 
     home.file."./.bashrc" = {
       source = ../modules/programs/bashrc/bashrc.conf;

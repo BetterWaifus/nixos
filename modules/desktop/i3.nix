@@ -43,7 +43,7 @@
 
         keybindings = lib.mkOptionDefault {
           "Mod4+Shift+S" = "exec maim -s | xclip -sel clip -t image/png";
-          "Mod4+d" = "exec --no-startup-id rofi -show run";
+          "Mod4+d" = "exec rofi -show drun";
           "XF86MonBrightnessUp" = "exec light -A 10";
           "XF86MonBrightnessDown" = "exec light -U 10";
           "XF86AudioRaiseVolume" = "exec amixer set Master 1%+";

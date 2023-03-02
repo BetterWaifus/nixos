@@ -2,6 +2,7 @@
   imports = [
     ./desktop/polybar.nix
     ./desktop/gtk.nix
+    ./desktop/rofi.nix
     ./desktop/i3.nix
     ./desktop/feh.nix
     ./desktop/pywal.nix
