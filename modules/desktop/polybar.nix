@@ -145,7 +145,7 @@
 
           interval = 1;
 
-          label-connected = "%{A:alacritty -e nmtui&:} %linkspeed%%{A}";
+          label-connected = "%{A:xst -e nmtui&:}󰈁%{A}";
           label-disconnected = "%{A:xst -e nmtui&:}%{A}";
           label-disconnected-foreground = "%{F#F0C674}%ifname%%{F#707880} disconnected";
         };
@@ -158,7 +158,7 @@
           interval = 1;
 
           label-connected = "%{A:alacritty -e nmtui&:}直  %essid%%{A}";
-          label-disconnected = "%{A:xst -e nmtui&:}睊%{A}";
+          label-disconnected = "%{A:xst -e nmtui&:}睊 %{A}";
           label-disconnected-foreground = "%{F#F0C674}%ifname%%{F#707880} disconnected";
         };
 
