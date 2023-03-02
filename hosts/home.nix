@@ -49,6 +49,7 @@
       i3lock-color
       xfce.xfce4-taskmanager
       xfce.xfce4-power-manager
+      gimp-with-plugins
     ];
 
     home.file = {
