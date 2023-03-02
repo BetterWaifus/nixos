@@ -2,7 +2,9 @@
   imports = [
     ./desktop/polybar.nix
     ./desktop/gtk.nix
+    ./desktop/i3.nix
     ./desktop/feh.nix
+    ./desktop/pywal.nix
     ./impermanence.nix
     ./home_folders.nix
     ./programs/alacritty.nix
@@ -19,5 +21,6 @@
     ./programs/networkmanager.nix
     ./programs/transmission.nix
     ./programs/transmission-remote-gtk.nix
+    ./programs/sanoid.nix
   ];
 }

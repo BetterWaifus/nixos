@@ -2,6 +2,8 @@
   home-manager.users.${user} = {
     services.polybar = {
       enable = true;
+      script = "polybar &";
+      package = pkgs.polybarFull;
       config = {
         colors = {
           background = "\${xrdb:color0:#222}";
