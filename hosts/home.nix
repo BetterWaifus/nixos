@@ -48,6 +48,8 @@
       gimp-with-plugins
       pywal
       rofi
+      pavucontrol
+      armcord
     ];
 
     home.file."./.bashrc" = {

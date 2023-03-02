@@ -50,6 +50,7 @@
           "XF86AudioLowerVolume" = "exec amixer set Master 1%-";
           "XF86AudioMute" = "exec amixer set Master toggle";
           "Mod4+Shift+X" = "exec bash ~/lock.sh";
+          "Mod4+Shift+V" = "exec pavucontrol";
         };
 
         startup = [

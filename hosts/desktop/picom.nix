@@ -3,7 +3,7 @@
   home-manager.users.${user} = {
     services.picom = {
       enable = true;
-      packages = pkgs.picom;
+      package = pkgs.picom;
 
       vSync = false;
 
