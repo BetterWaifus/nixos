@@ -74,12 +74,12 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
-  #services.xserver.displayManager = {
-  #  autoLogin = {
-  #     enable = true;
-  #    user = "${user}";
-  #  };
-  #};
+  services.xserver.displayManager = {
+    autoLogin = {
+      enable = true;
+      user = "${user}";
+    };
+  };
 
   # zfs examines all data in the specified pools to verify that it checksums correctly.
   services.zfs = {
