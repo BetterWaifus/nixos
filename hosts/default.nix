@@ -16,6 +16,7 @@
 
       services.polybar = {
         script = "polybar &";
+        package = pkgs.polybarFull;
         enable = true;
       };
 

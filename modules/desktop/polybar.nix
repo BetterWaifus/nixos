@@ -40,7 +40,7 @@
           font-1 = "${config.styley.monospacefont}:pixelsize=12;3";
 
           modules-left = "xworkspaces xwindow";
-          modules-right = "wlan lan backlight volume battery date";
+          modules-right = "wlan eth backlight volume battery date";
 
           cursor-click = "pointer";
           cursor-scroll = "ns-resize";
@@ -136,14 +136,14 @@
           label = "%percentage:2%%";
         };
 
-        "module/lan" = {
+        "module/eth" = {
           type = "internal/network";
 
-          interface = "enp0s31f6";
+          interface-type = "wired";
 
           interval = 1;
 
-          label-connected = "";
+          label-connected = "%{A:alacritty -e nmtui&:} %linkspeed%%{A}";
           label-disconnected = "";
           label-disconnected-foreground = "%{F#F0C674}%ifname%%{F#707880} disconnected";
         };
@@ -151,11 +151,11 @@
         "module/wlan" = {
           type = "internal/network";
 
-          interface = "wlp2s0";
+          interface = "wireless";
 
           interval = 1;
 
-          label-connected = "%{A:xst -e nmtui&:}直  %essid%%{A}";
+          label-connected = "%{A:alacritty -e nmtui&:}直  %essid%%{A}";
           label-disconnected = "%{A:xst -e nmtui&:}睊%{A}";
           label-disconnected-foreground = "%{F#F0C674}%ifname%%{F#707880} disconnected";
         };
