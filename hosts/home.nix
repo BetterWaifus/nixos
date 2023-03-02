@@ -21,7 +21,6 @@
       light
       xclip
       neofetch
-      virt-manager
       steam
       parsec-bin
       dolphin-emu
@@ -40,7 +39,7 @@
       heroic
       nixpkgs-fmt
       nil
-      zip
+      mate.engrampa
       vlc
       i3lock-color
       xfce.xfce4-taskmanager
@@ -50,6 +49,7 @@
       rofi
       pavucontrol
       armcord
+      looking-glass-client
     ];
 
     home.file."./.bashrc" = {
