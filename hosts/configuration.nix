@@ -52,6 +52,10 @@
   # Enable OpenGL 32bit support
   hardware.opengl.driSupport32Bit = true;
 
+  # Enable Bluetooth support
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   # shut sudo up
   security.sudo.extraConfig = "Defaults lecture=never";
 
