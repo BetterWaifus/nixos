@@ -59,9 +59,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable LightDM
-  # services.xserver.displayManager.lightdm.enable = true;
-
   # Sets i3 as default display manager
   environment.pathsToLink = [ "/libexec" ];
   services.xserver.desktopManager.xterm.enable = false;
