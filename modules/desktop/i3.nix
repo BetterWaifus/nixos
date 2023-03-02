@@ -59,7 +59,12 @@
             notification = false;
           }
           {
-            command = lib.mkAfter "systemctl --user restart polybar.service";
+            command = "systemctl --user restart polybar.service";
+            always = true;
+            notification = false;
+          }
+          {
+            command = lib.mkAfter "exec bash ~/lock.sh";
             always = true;
             notification = false;
           }
