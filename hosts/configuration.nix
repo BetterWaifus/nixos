@@ -60,7 +60,7 @@
   services.xserver.enable = true;
 
   # Enable LightDM
-  services.xserver.displayManager.lightdm.enable = true;
+  # services.xserver.displayManager.lightdm.enable = true;
 
   # Sets i3 as default display manager
   environment.pathsToLink = [ "/libexec" ];
