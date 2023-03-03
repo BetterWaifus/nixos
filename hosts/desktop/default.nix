@@ -6,9 +6,20 @@
     ./picom.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot";
+  boot.loader = {
+    # systemd-boot.enable = true;
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
+    grub = {
+      enable = true;
+      devices = [ "nodev" ];
+      efiSupport = true;
+      version = 2;
+      useOSProber = true;
+    };
+  };
 
   home-manager.users.${user} = {
 
@@ -16,7 +27,7 @@
       config = {
         startup = [
           {
-            command = "xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-0 --off --output DP-1 --off --output DP-2 --mode 1920x1080 --pos 0x0 --rotate left --rate 144 --output DP-3 --off --output DP-4 --primary --mode 2560x1440 --pos 1080x240 --rotate normal --rate 165 --output DP-5 --off";
+            command = "xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --off --output DP-2 --primary --mode 2560x1440 --pos 1080x198 --rotate normal --rate 165 --output DP-3 --off --output DP-4 --mode 1920x1080 --pos 0x0 --rotate left --rate 144 --output DP-5 --off --output USB-C-0 --off";
             always = true;
             notification = false;
           }
