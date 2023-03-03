@@ -162,7 +162,7 @@ in
 
           interval = 1;
 
-          label-connected = "%{A:${alacritty} -e ${nmtui}:} %essid%%{A}";
+          label-connected = "%{A:${alacritty} -e ${nmtui}:}  %essid%%{A}";
           label-disconnected = "%{A:${alacritty} -e ${nmtui}:}󰖪 %{A}";
           label-disconnected-foreground = "%{F#F0C674}%ifname%%{F#707880} disconnected";
         };
