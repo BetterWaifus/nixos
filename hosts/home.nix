@@ -49,8 +49,6 @@
       rofi
       pavucontrol
       armcord
-      looking-glass-client
-      bottles
     ];
 
     home.file."./.bashrc" = {
