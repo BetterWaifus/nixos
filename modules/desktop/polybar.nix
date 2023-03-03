@@ -1,4 +1,9 @@
-{ pkgs, host, user, config, ... }: {
+{ pkgs, host, user, config, ... }:
+let
+  alacritty = "${pkgs.alacritty}/bin/alacritty";
+  nmtui = "${pkgs.networkmanager}/bin/nmtui";
+in
+{
   home-manager.users.${user} = {
     services.polybar = {
       enable = true;
@@ -157,8 +162,8 @@
 
           interval = 1;
 
-          label-connected = "%{A:alacritty -e nmtui&:} %essid%%{A}";
-          label-disconnected = "%{A:xst -e nmtui&:}󰖪 %{A}";
+          label-connected = "%{A:${alacritty} -e ${nmtui}:} %essid%%{A}";
+          label-disconnected = "%{A:${alacritty} -e ${nmtui}:}󰖪 %{A}";
           label-disconnected-foreground = "%{F#F0C674}%ifname%%{F#707880} disconnected";
         };
 
@@ -210,3 +215,4 @@
     };
   };
 }
+  
