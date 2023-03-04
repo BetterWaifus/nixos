@@ -24,6 +24,7 @@
     services = {
       transmission = {
         enable = true;
+        inherit user;
         settings = {
           alt-speed-down = 50;
           alt-speed-enabled = false;
