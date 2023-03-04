@@ -39,6 +39,7 @@
       heroic
       nixpkgs-fmt
       nil
+      zip
       mate.engrampa
       vlc
       i3lock-color
@@ -48,7 +49,6 @@
       pywal
       rofi
       pavucontrol
-      armcord
     ];
 
     home.file."./.bashrc" = {
