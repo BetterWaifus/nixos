@@ -38,13 +38,13 @@
           blocklist-url = "http://www.example.com/blocklist";
           cache-size-mb = 4;
           dht-enabled = true;
-          download-dir = "/var/lib/transmission/Downloads";
+          download-dir = "/media/2TB_SSHD/transmission/completed";
           download-queue-enabled = true;
           download-queue-size = 5;
           encryption = 1;
           idle-seeding-limit = 30;
           idle-seeding-limit-enabled = false;
-          incomplete-dir = "/var/lib/transmission/.incomplete";
+          incomplete-dir = "/media/2TB_SSHD/transmission/incomplete";
           incomplete-dir-enabled = true;
           lpd-enabled = false;
           message-level = 2;
@@ -91,7 +91,7 @@
           umask = 2;
           upload-slots-per-torrent = 14;
           utp-enabled = true;
-          watch-dir = "/var/lib/transmission/watchdir";
+          watch-dir = "/media/2TB_SSHD/transmission/watch-dir";
           watch-dir-enabled = false;
         };
       };
