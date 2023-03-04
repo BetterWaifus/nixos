@@ -37,6 +37,7 @@
 
         opacity-rule = [
           "100:name *= 'LimbusCompany'"
+          "100:name *= 'Firefox'"
         ];
       };
     };
