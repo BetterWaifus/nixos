@@ -34,13 +34,12 @@
       gnome.gnome-clocks
       gnome.seahorse
       gnome.eog
+      gnome.file-roller
       winetricks
       wine-staging
       heroic
       nixpkgs-fmt
       nil
-      zip
-      mate.engrampa
       vlc
       i3lock-color
       xfce.xfce4-taskmanager
