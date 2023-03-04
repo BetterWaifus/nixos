@@ -9,6 +9,7 @@
       "file:///home/${user}/Pictures"
       "file:///home/${user}/nixos"
       "file:///persist"
+      "file:///media/2TB_SSHD/Library"
     ];
 
     dconf.settings = {
