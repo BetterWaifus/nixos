@@ -1,13 +1,18 @@
 { pkgs, host, user, ... }: {
   imports = [
+    # Desktop
     ./desktop/polybar.nix
     ./desktop/gtk.nix
     ./desktop/rofi.nix
     ./desktop/i3.nix
     ./desktop/feh.nix
     ./desktop/pywal.nix
+
+    # Misc
     ./impermanence.nix
     ./home_folders.nix
+
+    # Programs
     ./programs/alacritty.nix
     ./programs/nemo.nix
     ./programs/firefox.nix
@@ -20,8 +25,10 @@
     ./programs/keyring.nix
     ./programs/appimage-run.nix
     ./programs/networkmanager.nix
-    ./programs/transmission.nix
-    ./programs/transmission-remote-gtk.nix
     ./programs/sanoid.nix
+
+    # Media
+    ./media/transmission.nix
+    ./media/sonarr.nix
   ];
 }
