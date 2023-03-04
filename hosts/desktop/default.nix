@@ -17,18 +17,6 @@
       devices = [ "nodev" ];
       efiSupport = true;
       version = 2;
-      extraEntries = lib.concatStringsSep "\n" [
-        ''
-          menuentry "Windows 10" {
-            insmod part_gpt
-            insmod fat
-            insmod search_fs_uuid
-            insmod chain
-            search --fs-uuid --set=root C4EA-88C2
-            chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-          }
-        ''
-      ];
     };
   };
 
