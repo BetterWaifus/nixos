@@ -20,7 +20,10 @@
           }
         ];
 
-        window.border = 0;
+        window = {
+          border = 0;
+          titlebar = false;
+        };
 
         fonts = {
           names = [ config.styley.font ];
