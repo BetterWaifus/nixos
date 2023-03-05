@@ -48,7 +48,7 @@
       pywal
       rofi
       pavucontrol
-      discord-ptb
+      discord
     ];
 
     home.file."./.bashrc" = {
