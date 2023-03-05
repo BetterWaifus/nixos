@@ -32,6 +32,5 @@
     # Media
     ./media/transmission.nix
     ./media/sonarr.nix
-    ./media/kodi.nix
   ];
 }
