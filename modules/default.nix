@@ -7,10 +7,12 @@
     ./desktop/i3.nix
     ./desktop/feh.nix
     ./desktop/pywal.nix
+    ./desktop/picom.nix
 
     # Misc
     ./impermanence.nix
     ./home_folders.nix
+    ./zfs.nix
 
     # Programs
     ./programs/alacritty.nix
@@ -30,5 +32,6 @@
     # Media
     ./media/transmission.nix
     ./media/sonarr.nix
+    ./media/samba.nix
   ];
 }

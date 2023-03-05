@@ -1,10 +1,6 @@
 { config, pkgs, user, lib, host, ... }:
 {
-  imports = [
-    ./hardware-configuration.nix
-    ../../modules/zfs.nix
-    ./picom.nix
-  ];
+  imports = [ ./hardware.nix ];
 
   boot.loader = {
     # systemd-boot.enable = true;

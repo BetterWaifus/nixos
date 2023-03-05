@@ -117,7 +117,6 @@
       alacritty
       vscode
       sanoid
-      samba
       appimage-run
 
       # support both 32- and 64-bit applications
