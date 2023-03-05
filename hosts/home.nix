@@ -35,8 +35,6 @@
       gnome.seahorse
       gnome.eog
       gnome.file-roller
-      winetricks
-      wine-staging
       heroic
       nixpkgs-fmt
       nil
