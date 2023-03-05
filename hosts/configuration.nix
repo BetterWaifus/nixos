@@ -150,12 +150,24 @@
     ];
   };
 
+  # Adjusting brightness
   programs.light = {
     enable = true;
   };
 
+  # Enables Steam controller support and other steam related services
   programs.steam.enable = true;
 
+  # Set Default Applications
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "inode/directory" = "nemo.desktop";
+      "application/zip" = "org.gnome.FileRoller.desktop";
+    };
+  };
+
+  # Uses hardware clock to determine time within Nix
   time.hardwareClockInLocalTime = true;
 
   # Some programs need SUID wrappers, can be configured further or are
