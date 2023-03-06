@@ -8,6 +8,7 @@
     ./desktop/feh.nix
     ./desktop/pywal.nix
     ./desktop/picom.nix
+    ./desktop/dunst.nix
 
     # Misc
     ./impermanence.nix

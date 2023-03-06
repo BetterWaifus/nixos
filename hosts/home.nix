@@ -47,6 +47,7 @@
       rofi
       pavucontrol
       discord
+      libnotify
     ];
 
     home.file."./.bashrc" = {
