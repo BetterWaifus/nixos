@@ -5,7 +5,7 @@
   config = {
 
     styley = {
-      media.enable = true;
+      media.enable = false;
       picom.enable = true;
     };
 
