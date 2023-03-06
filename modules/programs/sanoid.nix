@@ -22,6 +22,18 @@
       weekly = 6;
       monthly = 3;
     };
+    datasets."zfs-pool-4TB_HDD/media" = {
+      hourly = 50;
+      daily = 20;
+      weekly = 6;
+      monthly = 3;
+    };
+    datasets."zfs-pool-4TB_HDD/media/4TB_HDD" = {
+      hourly = 50;
+      daily = 20;
+      weekly = 6;
+      monthly = 3;
+    };
     datasets."zroot/safe" = {
       hourly = 50;
       daily = 20;

@@ -16,6 +16,11 @@
     fsType = "zfs";
   };
 
+  fileSystems."/media/4TB_HDD" = {
+    device = "zfs-pool-4TB_HDD/media/4TB_HDD";
+    fsType = "zfs";
+  };
+
   networking.hostId = "efa5f2bf";
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
