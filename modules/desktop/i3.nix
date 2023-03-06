@@ -52,6 +52,7 @@
           "XF86AudioMute" = "exec amixer set Master toggle";
           "Mod4+Shift+X" = "exec bash ~/lock.sh";
           "Mod4+Shift+V" = "exec pavucontrol";
+          "Mod4+Shift+A" = "exec dunstctl history-pop";
         };
 
         startup = [
