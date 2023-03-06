@@ -1,6 +1,6 @@
 { config, pkgs, user, lib, host, ... }:
 {
-  home-manager.users.${user} = {
+  home-manager.users.${user} = lib.mkIf config.styley.picom.enable {
     services.picom = {
       enable = true;
       package = pkgs.picom;

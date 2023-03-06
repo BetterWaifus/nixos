@@ -1,6 +1,6 @@
 { pkgs, user, lib, config, ... }:
 {
-  config = {
+  config = lib.mkIf config.styley.media.enable {
     # transmission dark mode, the default theme is hideous
     nixpkgs.overlays = [
       (self: super: {

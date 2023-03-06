@@ -1,5 +1,5 @@
 { pkgs, user, lib, config, ... }: {
-  config = {
+  config = lib.mkIf config.styley.media.enable {
     services.sonarr = {
       enable = true;
       user = user;
