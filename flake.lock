@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "aagl-gtk-on-nix": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1678079409,
+        "narHash": "sha256-DT2Qx+XQTPcKTRejx+kUlAob/xX0RSU5QF44tnmRWIw=",
+        "owner": "ezKEa",
+        "repo": "aagl-gtk-on-nix",
+        "rev": "df8b711275a93393d32521069705a7ea5586f7b4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ezKEa",
+        "repo": "aagl-gtk-on-nix",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -54,6 +70,7 @@
     },
     "root": {
       "inputs": {
+        "aagl-gtk-on-nix": "aagl-gtk-on-nix",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "nixpkgs": "nixpkgs"
