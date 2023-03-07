@@ -21,21 +21,21 @@
       light
       xclip
       neofetch
-      steam
-      parsec-bin
-      dolphin-emu
-      yuzu-early-access
-      ryujinx
+      #steam
+      #parsec-bin
+      #dolphin-emu
+      #yuzu-early-access
+      #ryujinx
       protonup-qt
       protontricks
       cinnamon.nemo
-      keepass
-      obs-studio
+      #keepass
+      #obs-studio
       gnome.gnome-clocks
       gnome.seahorse
       gnome.eog
       gnome.file-roller
-      heroic
+      #heroic
       nixpkgs-fmt
       nil
       vlc
@@ -46,7 +46,7 @@
       pywal
       rofi
       pavucontrol
-      discord
+      #discord
       libnotify
     ];
 
