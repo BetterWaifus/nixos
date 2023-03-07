@@ -21,7 +21,6 @@
       light
       xclip
       neofetch
-      #steam
       #parsec-bin
       #dolphin-emu
       #yuzu-early-access
