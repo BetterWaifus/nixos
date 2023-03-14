@@ -156,7 +156,7 @@
   };
 
   # Enables Steam controller support and other steam related services
-  programs.steam.enable = true;
+  programs.steam.enable = false;
 
   # Set Default Applications
   xdg.mime = {

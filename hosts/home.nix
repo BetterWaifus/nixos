@@ -21,9 +21,9 @@
       light
       xclip
       neofetch
-      dolphin-emu
-      yuzu-early-access
-      ryujinx
+      #dolphin-emu
+      #yuzu-early-access
+      #ryujinx
       protonup-qt
       protontricks
       cinnamon.nemo
@@ -33,7 +33,7 @@
       gnome.seahorse
       gnome.eog
       gnome.file-roller
-      heroic
+      #heroic
       nixpkgs-fmt
       nil
       vlc
@@ -44,7 +44,7 @@
       pywal
       rofi
       pavucontrol
-      discord
+      #discord
       libnotify
       autotiling
       (pkgs.callPackage ../modules/programs/parsec.nix { })
