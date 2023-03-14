@@ -1,6 +1,6 @@
 { pkgs, host, user, config, ... }:
 let
-  alacritty = "${pkgs.alacritty}/bin/alacritty";
+  kitty = "${pkgs.kitty}/bin/kitty";
   nmtui = "${pkgs.networkmanager}/bin/nmtui";
 in
 {
@@ -162,8 +162,8 @@ in
 
           interval = 1;
 
-          label-connected = "%{A:${alacritty} -e ${nmtui}:}  %essid%%{A}";
-          label-disconnected = "%{A:${alacritty} -e ${nmtui}:}󰖪 %{A}";
+          label-connected = "%{A:${kitty} -e ${nmtui}:}  %essid%%{A}";
+          label-disconnected = "%{A:${kitty} -e ${nmtui}:}󰖪 %{A}";
           label-disconnected-foreground = "%{F#F0C674}%ifname%%{F#707880} disconnected";
         };
 

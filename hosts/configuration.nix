@@ -101,7 +101,7 @@
   # $ nix search wget
   environment = {
     variables = {
-      TERMINAL = "alacritty";
+      TERMINAL = "kitty";
     };
     systemPackages = with pkgs; [
       curl
@@ -114,7 +114,7 @@
       tree
       wget
       gparted
-      alacritty
+      kitty
       vscode
       sanoid
       appimage-run

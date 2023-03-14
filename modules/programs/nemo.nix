@@ -14,10 +14,10 @@
 
     dconf.settings = {
       "org/gnome/desktop/applications/terminal" = {
-        exec = "alacritty";
+        exec = "kitty";
       };
       "org/cinnamon/desktop/applications/terminal" = {
-        exec = "alacritty";
+        exec = "kitty";
       };
       "org/nemo/preferences" = {
         default-folder-viewer = "list-view";

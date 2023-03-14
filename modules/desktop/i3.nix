@@ -6,7 +6,7 @@
       enable = true;
       config = {
         modifier = "Mod4";
-        terminal = "alacritty";
+        terminal = "kitty";
         defaultWorkspace = "workspace number 1";
 
         workspaceOutputAssign = [

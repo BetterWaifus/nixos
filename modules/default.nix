@@ -16,7 +16,7 @@
     ./zfs.nix
 
     # Programs
-    ./programs/alacritty.nix
+    ./programs/kitty.nix
     ./programs/nemo.nix
     ./programs/firefox.nix
     ./programs/vscode.nix
