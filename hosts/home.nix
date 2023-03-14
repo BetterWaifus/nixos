@@ -21,7 +21,6 @@
       light
       xclip
       neofetch
-      parsec-bin
       dolphin-emu
       yuzu-early-access
       ryujinx
@@ -47,6 +46,8 @@
       pavucontrol
       discord
       libnotify
+      autotiling
+      (pkgs.callPackage ../modules/programs/parsec.nix { })
     ];
 
     home.file."./.bashrc" = {
