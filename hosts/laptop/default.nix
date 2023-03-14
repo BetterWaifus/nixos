@@ -7,6 +7,7 @@
     styley = {
       media.enable = false;
       picom.enable = true;
+      tlp.enable = true;
     };
 
     boot.loader.systemd-boot.enable = true;

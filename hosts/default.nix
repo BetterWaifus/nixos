@@ -8,6 +8,7 @@
   };
   options.styley.media.enable = lib.mkEnableOption "media";
   options.styley.picom.enable = lib.mkEnableOption "picom";
+  options.styley.tlp.enable = lib.mkEnableOption "tlp";
   imports = [
     ./configuration.nix
     ./home.nix
