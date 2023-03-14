@@ -12,7 +12,7 @@
 
     # Misc
     ./impermanence.nix
-    ./home_folders.nix
+    ./persist.nix
     ./zfs.nix
 
     # Programs

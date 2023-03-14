@@ -7,5 +7,8 @@
       "Pictures"
       "Documents/Apps"
     ];
+    styley.persist.root.directories = [
+      "root/.parsec"
+    ];
   };
 }
