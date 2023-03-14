@@ -72,6 +72,11 @@
             always = true;
             notification = false;
           }
+          {
+            command = "exec autotiling -w 1 2 3 4";
+            always = true;
+            notification = false;
+          }
         ];
       };
 
