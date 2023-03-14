@@ -47,6 +47,7 @@
       discord
       libnotify
       autotiling
+      tlp
       (pkgs.callPackage ../modules/programs/parsec.nix { })
     ];
 
