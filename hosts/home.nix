@@ -45,6 +45,7 @@
       rofi
       pavucontrol
       discord
+      lutris
       libnotify
       autotiling
       (pkgs.callPackage ../modules/programs/parsec.nix { })
