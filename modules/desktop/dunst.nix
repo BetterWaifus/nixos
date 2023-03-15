@@ -11,7 +11,7 @@
               horizontal_padding = 10;
               frame_width = 0;
               frame_color = "#0B0A0B";
-              separator_color = "#f3e8c9";
+              separator_color = "#dedede";
               font = "${config.styley.font} Regular 12";
               ellipsize = "end";
               show_indicators = "no";
@@ -20,17 +20,17 @@
             };
             urgency_low = {
               background = "#0B0A0B";
-              foreground = "#f3e8c9";
+              foreground = "#dedede";
               timeout = 10;
             };
             urgency_normal = {
               background = "#0B0A0B";
-              foreground = "#f3e8c9";
+              foreground = "#dedede";
               timeout = 10;
             };
             urgency_critical = {
               background = "#0B0A0B";
-              foreground = "#f3e8c9";
+              foreground = "#dedede";
               timeout = 0;
             };
             brightness-change = {
