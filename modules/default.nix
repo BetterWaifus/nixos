@@ -29,7 +29,6 @@
     ./programs/appimage-run.nix
     ./programs/networkmanager.nix
     ./programs/sanoid.nix
-    ./programs/tlp.nix
     # An Anime Game Launcher is for Genshin Impact
     ./programs/aagl.nix
 

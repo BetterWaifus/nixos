@@ -7,7 +7,6 @@
     styley = {
       media.enable = true;
       picom.enable = true;
-      tlp.enable = false;
     };
 
     boot.loader = {
