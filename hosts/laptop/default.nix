@@ -7,6 +7,8 @@
     styley = {
       media.enable = false;
       picom.enable = true;
+      i3.enable = true;
+      hyprland.enable = false;
     };
 
     boot.loader.systemd-boot.enable = true;
