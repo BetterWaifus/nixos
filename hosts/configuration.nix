@@ -25,24 +25,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Sets i3 as default display manager
-  environment.pathsToLink = [ "/libexec" ];
-  services.xserver.desktopManager.xterm.enable = false;
-  services.xserver.windowManager.i3.package = pkgs.i3-gaps;
-  services.xserver.displayManager.defaultSession = "none+i3";
-  services.xserver.windowManager.i3 = {
-    enable = true;
-  };
-
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-
   # Enables automatic gnome-keyring unlock
   security.pam.services.gdm.enableGnomeKeyring = true;
 
@@ -196,6 +178,9 @@
   nix = {
     settings = {
       auto-optimise-store = true; # Optimise syslinks
+      # hyprland cachix
+      substituters = [ "https://hyprland.cachix.org" ];
+      trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
     };
     gc = {
       # Automatic garbage collection

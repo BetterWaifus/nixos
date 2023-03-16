@@ -50,6 +50,8 @@ buildFHSUserEnv {
     xorg.libXrender
     xorg.libXxf86vm
     xorg.libxcb
+    wayland
+    gnome.zenity
     # Those libraries are missing from buildInputs
     # libGLES_CM.so.1        # Can't find in my /nix/store
     # libudev.so.0           # Covered by libudev.so.1

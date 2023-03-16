@@ -1,6 +1,22 @@
 { config, pkgs, user, lib, host, ... }:
 {
   config = lib.mkIf config.styley.i3.enable {
+
+    services.xserver.enable = true;
+
+    environment.pathsToLink = [ "/libexec" ];
+    services.xserver.desktopManager.xterm.enable = false;
+    services.xserver.windowManager.i3.package = pkgs.i3-gaps;
+    services.xserver.displayManager.defaultSession = "none+i3";
+    services.xserver.windowManager.i3 = {
+      enable = true;
+    };
+
+    services.xserver = {
+      layout = "us";
+      xkbVariant = "";
+    };
+
     home-manager.users.${user} = {
 
       xsession.windowManager.i3 = {

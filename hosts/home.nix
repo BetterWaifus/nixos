@@ -46,6 +46,7 @@
       lutris
       libnotify
       autotiling
+      xorg.xhost
       (pkgs.callPackage ../modules/programs/parsec.nix { })
     ];
 

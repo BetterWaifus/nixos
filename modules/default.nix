@@ -3,15 +3,16 @@
     # Desktop
     ./desktop/dunst.nix
     ./desktop/gtk.nix
-    ./desktop/rofi.nix
+    ./desktop/rofi/rofi.nix
     ./desktop/pywal.nix
     #i3
-    ./desktop/i3/i3.nix
+    ./desktop/i3/default.nix
     ./desktop/i3/i3lock.nix
     ./desktop/i3/feh.nix
     ./desktop/i3/picom.nix
     ./desktop/i3/polybar.nix
     #hyprland
+    ./desktop/hyprland/default.nix
 
     # Misc
     ./impermanence.nix
