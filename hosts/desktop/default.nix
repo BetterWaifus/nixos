@@ -27,7 +27,7 @@
 
     home-manager.users.${user} = {
 
-      xsession.windowManager.i3 = {
+      xsession.windowManager.i3 = lib.mkIf config.styley.i3.enable {
         config = {
           assigns = {
             "1" = [{ class = "^firefox$"; } { class = "^discord$"; }];

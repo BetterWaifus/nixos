@@ -19,7 +19,7 @@
 
     home-manager.users.${user} = {
 
-      xsession.windowManager.i3 = {
+      xsession.windowManager.i3 = lib.mkIf config.styley.i3.enable {
         config = {
           startup = [
             {
