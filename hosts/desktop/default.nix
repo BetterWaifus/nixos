@@ -21,8 +21,8 @@
         monitor=${config.styley.hyprland.monitors.monitor2},transform,1 # rotate monitor
         ";
       hyprland.wallpapers = {
-        "${config.styley.hyprland.monitors.monitor1}" = "${../../modules/desktop/wallpaper/desktop}";
-        "${config.styley.hyprland.monitors.monitor2}" = "${../../modules/desktop/wallpaper/desktop}";
+        "${config.styley.hyprland.monitors.monitor1}" = "${../../modules/desktop/wallpaper/desktop/ellowas-widow-5040x2160.jpg}";
+        "${config.styley.hyprland.monitors.monitor2}" = "${../../modules/desktop/wallpaper/desktop/ellowas-widow-5040x2160.jpg}";
       };
     };
 
