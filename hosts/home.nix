@@ -47,6 +47,7 @@
       libnotify
       autotiling
       xorg.xhost
+      gamescope
       (pkgs.callPackage ../modules/programs/parsec.nix { })
     ];
 

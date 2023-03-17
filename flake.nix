@@ -19,6 +19,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprwm-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixpkgs-wayland = {
+      url = "github:nix-community/nixpkgs-wayland";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, impermanence, aagl-gtk-on-nix, ... }:

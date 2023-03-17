@@ -13,6 +13,8 @@
     ./desktop/i3/polybar.nix
     #hyprland
     ./desktop/hyprland/default.nix
+    ./desktop/hyprland/nvidia.nix
+    ./desktop/hyprland/waybar.nix
 
     # Misc
     ./impermanence.nix

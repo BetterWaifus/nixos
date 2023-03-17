@@ -7,8 +7,8 @@
     styley = {
       media.enable = true;
       picom.enable = true;
-      i3.enable = true;
-      hyprland.enable = false;
+      i3.enable = false;
+      hyprland.enable = true;
     };
 
     boot.loader = {
