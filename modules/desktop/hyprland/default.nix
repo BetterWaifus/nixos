@@ -26,11 +26,7 @@
         #
 
         # See https://wiki.hyprland.org/Configuring/Monitors/
-        monitor=DP-2,2560x1440@165,1080x198,1
-        workspace=DP-2,2
-        monitor=DP-3,1920x1080@144,0x0,1
-        workspace=DP-3,1
-        monitor=DP-3,transform,1 # rotate monitor
+        ${config.styley.hyprland.displays}
 
         # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
@@ -51,7 +47,7 @@
             kb_options =
             kb_rules =
 
-            follow_mouse = 1
+            follow_mouse = 2
 
             touchpad {
                 natural_scroll = false

@@ -15,6 +15,7 @@
     ./desktop/hyprland/default.nix
     ./desktop/hyprland/nvidia.nix
     ./desktop/hyprland/waybar.nix
+    ./desktop/hyprland/wallpaper.nix
 
     # Misc
     ./impermanence.nix

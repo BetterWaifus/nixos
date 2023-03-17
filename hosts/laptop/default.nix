@@ -9,6 +9,16 @@
       picom.enable = true;
       i3.enable = false;
       hyprland.enable = true;
+      hyprland.monitors = {
+        monitor1 = "eDP-1";
+      };
+      hyprland.displays = "
+        monitor=${config.styley.hyprland.monitors.monitor1},1366x768@60,0x0,1
+        workspace=${config.styley.hyprland.monitors.monitor1},1
+        ";
+      hyprland.wallpapers = {
+        "${config.styley.hyprland.monitors.monitor1}" = "${../../modules/desktop/wallpaper/laptop/ryoshu-7680x4320.png}";
+      };
     };
 
     boot.loader.systemd-boot.enable = true;
