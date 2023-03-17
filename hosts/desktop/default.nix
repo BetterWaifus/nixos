@@ -9,7 +9,7 @@
       picom.enable = true;
       i3.enable = false;
       hyprland.enable = true;
-      hyprland.monitor = {
+      hyprland.monitors = {
         monitor1 = "DP-2";
         monitor2 = "DP-3";
       };
