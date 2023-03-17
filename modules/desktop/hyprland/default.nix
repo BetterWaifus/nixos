@@ -31,7 +31,10 @@
         # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
         # Execute your favorite apps at launch
-        # exec-once = waybar & hyprpaper & firefox
+        exec-once = wal -c
+        exec-once = wal -i ${../wallpaper/laptop} -n
+        exec-once = swww init
+        exec-once = hypr-wallpaper
 
         # Source a file (multi-file configs)
         # source = ~/.config/hypr/myColors.conf
