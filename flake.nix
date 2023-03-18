@@ -38,6 +38,7 @@
           inherit (nixpkgs) lib;
           inherit inputs nixpkgs home-manager impermanence;
           user = "styley";
+          host = hostName;
         };
 
         modules = [
