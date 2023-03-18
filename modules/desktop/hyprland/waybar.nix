@@ -46,7 +46,7 @@
             };
             clock = {
               format-alt = "{:%Y-%m-%d}";
-              tooltip-format = "{:%Y-%m-%d | %H:%M}";
+              tooltip = false;
             };
             cpu = {
               format = "{usage}% ";
@@ -54,8 +54,12 @@
             };
             memory = { format = "{}% "; };
             network = {
-              format-ethernet = "";
-              format-disconnected = "睊  Offline";
+              interval = 1;
+              format-alt = "{ifname}: {ipaddr}/{cidr}";
+              format-disconnected = "Disconnected ⚠";
+              format-ethernet = "{ifname}: {ipaddr}/{cidr}   up: {bandwidthUpBits} down: {bandwidthDownBits}";
+              format-linked = "{ifname} (No IP) ";
+              format-wifi = "{essid} ({signalStrength}%) ";
               tooltip = false;
             };
             pulseaudio = {
@@ -83,7 +87,7 @@
            #clock, #workspaces button.active {
             margin-right: 4px;
           }
-          #pulseaudio {
+          #pulseaudio, #network, #battery {
             padding: 0 6;
           }
         '';
