@@ -35,6 +35,7 @@
             exec-once = wal -c
             exec-once = wal -i "${../wallpaper/${host}}" -n
             exec-once = swww init && hypr-wallpaper
+            exec-once = waybar
 
             # Source a file (multi-file configs)
             # source = ~/.config/hypr/myColors.conf
@@ -63,7 +64,7 @@
                 # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
                 gaps_in = 5
-                gaps_out = 8
+                gaps_out = 10
                 border_size = 2
                 col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
                 col.inactive_border = rgba(595959aa)
