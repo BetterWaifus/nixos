@@ -1,4 +1,4 @@
-{ pkgs, user, lib, host, config, ... }:
+{ pkgs, user, lib, config, ... }:
 {
   config = lib.mkIf config.styley.hyprland.enable {
     home-manager.users.${user} = {
@@ -57,7 +57,7 @@
               interval = 1;
               format-alt = "{ifname}: {ipaddr}/{cidr}";
               format-disconnected = "Disconnected ⚠";
-              format-ethernet = "{ifname}: {ipaddr}/{cidr}   up: {bandwidthUpBits} down: {bandwidthDownBits}";
+              format-ethernet = "";
               format-linked = "{ifname} (No IP) ";
               format-wifi = "{essid} ({signalStrength}%) ";
               tooltip = false;
@@ -77,7 +77,7 @@
           #waybar {
              background: transparent;
            }
-            #workspaces, #workspaces button, #battery, #network, #clock, #pulseaudio, #window, #backlight {
+            #workspaces, #workspaces button, #battery, #network, #clock, #pulseaudio, #window, #backlight, #tray {
              font-family: "Inter", "FontAwesome6Free";
              font-weight: bold;
              border-radius: 0;
@@ -87,7 +87,7 @@
            #clock, #workspaces button.active {
             margin-right: 4px;
           }
-          #pulseaudio, #network, #battery {
+          #pulseaudio, #network, #battery, #tray {
             padding: 0 6;
           }
         '';

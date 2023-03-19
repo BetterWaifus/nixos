@@ -16,14 +16,9 @@
       hyprland.displays = " 
         monitor=${config.styley.hyprland.monitors.monitor1},2560x1440@165,1080x198,1
         workspace=${config.styley.hyprland.monitors.monitor1},2
-        monitor=${config.styley.hyprland.monitors.monitor2},1920x1080@144,0x0,1
+        monitor=${config.styley.hyprland.monitors.monitor2},1920x1080@144,0x0,1,transform,1
         workspace=${config.styley.hyprland.monitors.monitor2},1
-        monitor=${config.styley.hyprland.monitors.monitor2},transform,1 # rotate monitor
         ";
-      hyprland.wallpapers = {
-        "${config.styley.hyprland.monitors.monitor1}" = "${../../modules/desktop/wallpaper/desktop/ellowas-widow-5040x2160.jpg}";
-        "${config.styley.hyprland.monitors.monitor2}" = "${../../modules/desktop/wallpaper/desktop/ellowas-widow-5040x2160.jpg}";
-      };
     };
 
     boot.loader = {

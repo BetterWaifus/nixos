@@ -1,29 +1,25 @@
-{ pkgs, inputs, system, user, lib, config, ... }:
+{ pkgs, inputs, user, host, ... }:
 let
-  cfg = config.styley.hyprland;
-  hypr-wallpaper = pkgs.writeShellScriptBin "hypr-wallpaper" (lib.concatStringsSep "\n" (
-    (lib.mapAttrsToList
-      (monitor: wallpaper: "swww img -o ${monitor} --transition-type grow ${wallpaper}")
-      cfg.wallpapers)
-  ));
+  hypr-wallpaper = pkgs.writeShellScriptBin "hypr-wallpaper" ''
+    wal -n -i "${../wallpaper/${host}}"
+    swww img "$(< "$HOME/.cache/wal/wal")"
+  '';
+  hypr-colors = pkgs.writeShellScriptBin "hypr-colors" ''
+    source ~/.cache/wal/colors.sh
+
+    hyprctl keyword general:col.active_border "rgba(''${color4:1:10}ee) rgba(''${color5:1:10}ee) 45deg"
+    hyprctl keyword general:col.inactive_border "rgba(''${color0:1:10}ee)"
+    hyprctl keyword windowrulev2 bordercolor "rgba(''${color6:1:10}ff),fullscreen:1" 
+    hyprctl keyword windowrulev2 bordercolor "rgba(''${color9:1:10}ff),floating:1" 
+  '';
 in
 {
-  options.styley.hyprland = {
-    wallpapers = lib.mkOption {
-      type = with lib.types; attrsOf str;
-      default = { };
-      description = "Attrset of wallpapers to use for swww";
-      example = ''{
-        DP-2 = "/path/to/wallpaper.png";
-      }'';
-    };
-  };
-
   config = {
     home-manager.users.${user} = {
       home = {
         packages = [
           hypr-wallpaper
+          hypr-colors
           inputs.nixpkgs-wayland.packages.x86_64-linux.swww
         ];
       };

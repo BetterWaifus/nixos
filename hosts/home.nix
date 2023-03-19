@@ -21,9 +21,6 @@
       light
       xclip
       neofetch
-      dolphin-emu
-      yuzu-early-access
-      ryujinx
       protonup-qt
       protontricks
       cinnamon.nemo

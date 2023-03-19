@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, host, inputs, ... }:
+{ config, pkgs, user, lib, inputs, ... }:
 {
   config = lib.mkIf config.styley.hyprland.enable {
     home-manager.users.${user} = {
@@ -33,8 +33,8 @@
 
             # Execute your favorite apps at launch
             exec-once = wal -c
-            exec-once = wal -i "${../wallpaper/${host}}" -n
             exec-once = swww init && hypr-wallpaper
+            exec-once = hypr-colors
             exec-once = waybar
 
             # Source a file (multi-file configs)
@@ -66,9 +66,6 @@
                 gaps_in = 5
                 gaps_out = 10
                 border_size = 2
-                col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
-                col.inactive_border = rgba(595959aa)
-
                 layout = dwindle
             }
 
@@ -76,6 +73,7 @@
                 # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
                 rounding = 10
+                inactive_opacity = 0.95
                 blur = true
                 blur_size = 3
                 blur_passes = 1

@@ -16,9 +16,6 @@
         monitor=${config.styley.hyprland.monitors.monitor1},2560x1440@165,0x0,1
         workspace=${config.styley.hyprland.monitors.monitor1},1
         ";
-      hyprland.wallpapers = {
-        "${config.styley.hyprland.monitors.monitor1}" = "${../../modules/desktop/wallpaper/desktop/ryoshu-7680x4320.png}";
-      };
     };
 
     boot.loader = {
