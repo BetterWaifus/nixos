@@ -15,6 +15,8 @@
       nil
       nixpkgs-fmt
       xorg.xrandr
+      xorg.xev
+      xorg.xhost
       arandr
       pulseaudio
       maim
@@ -43,8 +45,8 @@
       lutris
       libnotify
       autotiling
-      xorg.xhost
       gamescope
+      playerctl
       (pkgs.callPackage ../modules/programs/parsec.nix { })
     ];
 

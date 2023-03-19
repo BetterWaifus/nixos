@@ -119,7 +119,7 @@
             }
 
             misc {
-                key_press_enables_dpms = true
+                #key_press_enables_dpms = true
             }
 
             # Example per-device config
@@ -194,6 +194,11 @@
             bind = ,XF86AudioMute,exec, amixer set Master toggle
             bind = ,XF86AudioRaiseVolume,exec, amixer set Master 1%+
 
+            # media control
+            bind = ,XF86AudioPlay,exec, playerctl play-pause
+            bind = ,XF86AudioNext,exec, playerctl next
+            bind = ,XF86AudioPrev,exec, playerctl previous
+
             # brightness control
             bind = ,XF86MonBrightnessUp,exec, exec light -A 10
             bind = ,XF86MonBrightnessDown,exec, exec light -U 10
@@ -204,6 +209,10 @@
 
             # screenshot control
             bind = $mainMod, S, exec, grimblast --notify copy area
+
+            # sleep control
+            bind = $mainMod, L,exec,sleep 1 && hyprctl dispatch dpms off
+            bind = $mainMod, K,exec, hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
 
 
           '';
