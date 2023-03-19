@@ -1,4 +1,4 @@
-{ config, pkgs, user, host, ... }:
+{ pkgs, user, ... }:
 {
   imports = [
     ../modules
@@ -39,7 +39,7 @@
       xfce.xfce4-power-manager
       gimp-with-plugins
       pavucontrol
-      discord
+      webcord
       lutris
       libnotify
       autotiling
