@@ -1,6 +1,6 @@
 { pkgs, host, user, lib, config, ... }:
 {
-  config = lib.mkIf config.styley.hyprland.enable {
+  config = lib.mkIf (config.styley.hyprland.enable && host == "desktop") {
     hardware.nvidia = {
       # open = true;
       modesetting.enable = true;

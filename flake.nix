@@ -53,7 +53,8 @@
     {
       nixosConfigurations = {
         desktop = createHost { hostName = "desktop"; };
-        laptop = createHost { hostName = "laptop"; };
+        aspire = createHost { hostName = "aspire"; };
+        g15 = createHost { hostName = "g15"; };
         vm = createHost { hostName = "vm"; };
       };
     };
