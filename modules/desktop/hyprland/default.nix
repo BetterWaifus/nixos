@@ -36,6 +36,7 @@
             exec-once = swww init && hypr-wallpaper
             exec-once = hypr-colors
             exec-once = waybar
+            exec-once = xhost si:localuser:root
 
             # Source a file (multi-file configs)
             # source = ~/.config/hypr/myColors.conf
