@@ -73,7 +73,7 @@
     };
 
     # Enables AMD GPU drivers
-    services.xserver.videoDrivers = [ "amdgpu" ];
+    #services.xserver.videoDrivers = [ "amdgpu" ];
     hardware.opengl.enable = true;
 
   };
