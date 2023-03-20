@@ -1,4 +1,4 @@
-{ config, pkgs, lib, host, user, ... }:
+{ pkgs, user, ... }:
 {
 
   networking.hostName = "nixos"; # Define your hostname.

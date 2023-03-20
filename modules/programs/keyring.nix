@@ -1,4 +1,4 @@
-{ config, pkgs, user, ... }:
+{ pkgs, user, ... }:
 {
   config = {
     # enable gnome-keyring for all users

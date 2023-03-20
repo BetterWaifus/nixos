@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, inputs, ... }: {
+{ ... }: {
   # booting with zfs
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.devNodes = "/dev/disk/by-id";

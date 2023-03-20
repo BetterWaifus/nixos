@@ -1,4 +1,4 @@
-{ config, pkgs, lib, host, user, ... }:
+{ ... }:
 {
   # Sanoid is a snapshotting tool for ZFS
   # How to format drives to ZFS:

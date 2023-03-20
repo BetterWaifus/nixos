@@ -1,4 +1,4 @@
-{ pkgs, user, config, lib, ... }:
+{ user, ... }:
 {
   config = {
     home-manager.users.${user} = {

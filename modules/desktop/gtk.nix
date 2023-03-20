@@ -1,4 +1,4 @@
-{ pkgs, user, config, ... }: {
+{ pkgs, user, ... }: {
   services.gvfs.enable = true;
 
   home-manager.users.${user} = {

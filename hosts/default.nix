@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, host, ... }:
+{ config, lib, ... }:
 {
   options.styley.font = lib.mkOption {
     default = "Inter";

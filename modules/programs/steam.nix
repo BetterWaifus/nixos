@@ -1,4 +1,4 @@
-{ pkgs, user, config, ... }:
+{ ... }:
 {
   config = {
     # Enables Steam controller support and other steam related services

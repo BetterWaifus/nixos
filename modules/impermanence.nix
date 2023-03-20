@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, inputs, ... }:
+{ config, user, lib, ... }:
 let cfg = config.styley.persist; in
 {
   options.styley.persist = {

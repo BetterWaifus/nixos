@@ -1,4 +1,4 @@
-{ pkgs, user, theme, config, lib, ... }:
+{ pkgs, user, config, ... }:
 {
   home-manager.users.${user} = {
     home.packages = with pkgs; [ (if config.styley.hyprland.enable then rofi-wayland else rofi) ];

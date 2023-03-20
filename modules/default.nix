@@ -1,4 +1,4 @@
-{ pkgs, host, user, ... }: {
+{ ... }: {
   imports = [
     # Desktop
     ./desktop/dunst.nix

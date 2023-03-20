@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ ... }:
 {
   nix.settings = {
     substituters = [ "https://ezkea.cachix.org" ];
