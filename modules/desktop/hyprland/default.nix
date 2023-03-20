@@ -14,7 +14,7 @@
       wayland.windowManager.hyprland = {
         enable = true;
         systemdIntegration = true;
-        xwayland.hidpi = lib.mkIf host == "g15" true;
+        xwayland.hidpi = lib.mkIf (host == "g15") true;
         extraConfig =
           ''
             # This is an example Hyprland config file.
