@@ -1,7 +1,7 @@
 { pkgs, user, ... }:
 {
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "styley-pc";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
@@ -143,6 +143,12 @@
     defaultApplications = {
       "inode/directory" = "nemo.desktop";
       "application/zip" = "org.gnome.FileRoller.desktop";
+      "image/png" = "org.gnome.eog.desktop";
+      "image/jpeg" = "org.gnome.eog.desktop";
+      "image/jpg" = "org.gnome.eog.desktop";
+      "image/webp" = "org.gnome.eog.desktop";
+      "application/vnd.appimage" = "userapp-appimage-run-PYIK01.desktop"
+
     };
   };
 
