@@ -32,7 +32,7 @@
       };
     };
 
-    services.tlp.enable = true;
+    services.tlp.enable = false;
 
     home-manager.users.${user} = {
 
@@ -73,7 +73,7 @@
     };
 
     # Enables AMD GPU drivers
-    #services.xserver.videoDrivers = [ "amdgpu" ];
+    services.xserver.videoDrivers = [ "amdgpu" ];
     hardware.opengl.enable = true;
 
   };
