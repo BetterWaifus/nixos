@@ -9,7 +9,6 @@
     ];
     styley.persist.root.directories = [
       "root/.parsec"
-      "sys/class/backlight"
     ];
   };
 }
