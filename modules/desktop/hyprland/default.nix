@@ -240,6 +240,8 @@
       };
     };
 
+    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
     nixpkgs.overlays = [
       (self: super: {
         hyprwm-contrib-packages = inputs.hyprwm-contrib.packages.x86_64-linux;
