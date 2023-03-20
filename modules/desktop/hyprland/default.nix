@@ -217,7 +217,11 @@
 
             # sleep control
             bind = $mainMod, L,exec,sleep 1 && hyprctl dispatch dpms off
-            bind = $mainMod, K,exec, hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
+            bind = $mainMod, K,exec,hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
+
+            #laptop lid switch sleep
+            bindl=,switch:on:Lid Switch,exec,exec,sleep 1 && hyprctl dispatch dpms off
+            bindl=,switch:off:Lid Switch,exec,exec,hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
 
 
           '';
