@@ -49,6 +49,7 @@
       playerctl
       openrgb
       nvtop-amd
+      powertop
       (pkgs.callPackage ../modules/programs/parsec.nix { })
     ];
 
