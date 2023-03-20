@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, host, ... }:
+{ config, pkgs, user, lib, ... }:
 {
   imports = [ ./hardware.nix ];
 
@@ -33,6 +33,7 @@
     };
 
     services.tlp.enable = false;
+    sevices.thermald.enable = true;
     services.asusd.enable = true;
     services.asusd.enableUserService = true;
 
