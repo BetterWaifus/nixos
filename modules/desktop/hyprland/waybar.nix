@@ -74,7 +74,6 @@
               scroll-step = 1;
               format-muted = "婢 Muted";
               format-icons = [ "" "" "" ];
-              on-click = "amixer set Master toggle";
               on-click-right = "pavucontrol";
               tooltip = false;
             };
