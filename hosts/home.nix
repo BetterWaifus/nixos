@@ -47,6 +47,7 @@
       autotiling
       gamescope
       playerctl
+      openrgb
       (pkgs.callPackage ../modules/programs/parsec.nix { })
     ];
 
