@@ -13,7 +13,7 @@
         monitor1 = "eDP-1";
       };
       hyprland.displays = " 
-        monitor=${config.styley.hyprland.monitors.monitor1},2560x1440@165,0x0,1
+        monitor=${config.styley.hyprland.monitors.monitor1},2560x1440@165,0x0,1.5
         workspace=${config.styley.hyprland.monitors.monitor1},1
         ";
     };

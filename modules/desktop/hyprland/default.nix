@@ -14,7 +14,7 @@
       wayland.windowManager.hyprland = {
         enable = true;
         systemdIntegration = true;
-        xwayland.hidpi = lib.mkIf (host == "g15") true;
+        xwayland.hidpi = false;
         extraConfig =
           ''
             # This is an example Hyprland config file.
@@ -37,13 +37,6 @@
             exec-once = hypr-colors
             exec-once = waybar
             exec-once = xhost si:localuser:root
-
-            # sets xwayland scale
-            exec-once=xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
-
-            # toolkit-specific scale
-            env = GDK_SCALE,2
-            env = XCURSOR_SIZE,32
 
             # Source a file (multi-file configs)
             # source = ~/.config/hypr/myColors.conf
