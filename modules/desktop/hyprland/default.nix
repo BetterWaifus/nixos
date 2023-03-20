@@ -205,7 +205,7 @@
 
             # keyboard brightness control ASUS ONLY
             bind = ,XF86KbdBrightnessUp,exec, asusctl -n
-            bind = ,XF86KbdBrightnessDown,exec, asusctl -
+            bind = ,XF86KbdBrightnessDown,exec, asusctl -p
             bind = ,XF86Launch3,exec, asusctl led-mode -n
 
             # dunst controls
