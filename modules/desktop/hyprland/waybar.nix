@@ -24,6 +24,7 @@
             modules-right = [
               "network"
               "pulseaudio"
+              "backlight"
               "battery"
               "clock"
               "tray"
@@ -53,6 +54,12 @@
               tooltip = false;
             };
             memory = { format = "{}% "; };
+            backlight = {
+              format = "{icon}  {percent}%";
+              format-icons = [ "󰃞" "󰃟" "󰃝" "" ];
+              on-scroll-up = "light -A 10";
+              on-scroll-down = "light -U 10";
+            };
             network = {
               interval = 1;
               format-alt = "{ifname}: {ipaddr}/{cidr}";
@@ -75,19 +82,19 @@
         ];
         style = ''
           #waybar {
-             background: transparent;
+             background: rgba(0, 0, 0, 0.15);
            }
-            #workspaces, #workspaces button, #battery, #network, #clock, #pulseaudio, #window, #backlight, #tray {
+          #workspaces, #workspaces button, #battery, #backlight, #network, #clock, #pulseaudio, #window, #backlight, #tray {
              font-family: "Inter", "FontAwesome6Free";
              font-weight: bold;
              border-radius: 0;
              transition: none;
              padding: 0 2px;
            }
-           #clock, #workspaces button.active {
+          #clock, #workspaces button.active {
             margin-right: 4px;
           }
-          #pulseaudio, #network, #battery, #tray {
+          #backlight, #pulseaudio, #network, #battery, #tray {
             padding: 0 6;
           }
         '';
