@@ -33,8 +33,14 @@
     };
 
     services.tlp.enable = false;
+    services.asusd.enable = true;
+    services.asusd.enableUserService = true;
 
     home-manager.users.${user} = {
+      home.packages = with pkgs; [
+        #A control daemon, CLI tools, and a collection of crates for interacting with ASUS ROG laptops
+        asusctl
+      ];
 
       xsession.windowManager.i3 = lib.mkIf config.styley.i3.enable {
         config = {
