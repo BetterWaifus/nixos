@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, inputs, ... }:
+{ config, pkgs, user, lib, inputs, host, ... }:
 {
   config = lib.mkIf config.styley.hyprland.enable {
     home-manager.users.${user} = {
@@ -14,7 +14,7 @@
       wayland.windowManager.hyprland = {
         enable = true;
         systemdIntegration = true;
-        xwayland.hidpi = false;
+        xwayland.hidpi = lib.mkIf host == "g15" true;
         extraConfig =
           ''
             # This is an example Hyprland config file.
@@ -205,7 +205,8 @@
 
             # keyboard brightness control ASUS ONLY
             bind = ,XF86KbdBrightnessUp,exec, asusctl -n
-            bind = ,XF86KbdBrightnessDown,exec, asusctl -p
+            bind = ,XF86KbdBrightnessDown,exec, asusctl -
+            bind = ,XF86Launch3,exec, asusctl led-mode -n
 
             # dunst controls
             bind = $mainMod, Z, exec, dunstctl history-pop
