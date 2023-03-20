@@ -48,6 +48,7 @@
       gamescope
       playerctl
       openrgb
+      nvtop-amd
       (pkgs.callPackage ../modules/programs/parsec.nix { })
     ];
 
