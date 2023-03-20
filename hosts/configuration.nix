@@ -147,8 +147,7 @@
       "image/jpeg" = "org.gnome.eog.desktop";
       "image/jpg" = "org.gnome.eog.desktop";
       "image/webp" = "org.gnome.eog.desktop";
-      "application/vnd.appimage" = "userapp-appimage-run-PYIK01.desktop"
-
+      "application/vnd.appimage" = "userapp-appimage-run-PYIK01.desktop";
     };
   };
 
