@@ -203,6 +203,10 @@
             bind = ,XF86MonBrightnessUp,exec, exec light -A 10
             bind = ,XF86MonBrightnessDown,exec, exec light -U 10
 
+            # keyboard brightness control ASUS ONLY
+            bind = ,XF86KbdBrightnessUp,exec, asusctl -n
+            bind = ,XF86KbdBrightnessDown,exec, asusctl -p
+
             # dunst controls
             bind = $mainMod, Z, exec, dunstctl history-pop
             bind = $mainMod, X, exec, dunstctl close-all
