@@ -1,12 +1,14 @@
 { config, pkgs, user, lib, inputs, host, ... }:
 let
-  scale-toggle = pkgs.writeShellScriptBin (host == "g15") "scale-toggle" ''
+  scale-toggle = pkgs.writeShellScriptBin "scale-toggle" ''
     currentscale=$(hyprctl monitors -j | jq -r '.[] | select(.name == "eDP-1") .scale')
 
     if [ "$currentscale" = 1 ]; then
-        hyprctl keyword monitor eDP-1,2560x1440@165,0x0,1.5
+        hyprctl keyword monitor eDP-1,2560x1440@165,0x0,1.5 && swww kill && swww init
+        hypr-wallpaper && hypr-colors && notify-send "Scale Changed" "1.5"
     else
-        hyprctl keyword monitor eDP-1,2560x1440@165,0x0,1
+        hyprctl keyword monitor eDP-1,2560x1440@165,0x0,1 && swww kill && swww init
+        hypr-wallpaper && hypr-colors && notify-send "Scale Changed" "1"
     fi
   '';
 in
@@ -234,7 +236,7 @@ in
             bindl=,switch:on:Lid Switch,exec,exec, sleep 1 && hyprctl dispatch dpms off
             bindl=,switch:off:Lid Switch,exec,exec, hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
 
-            '' + optionalString (host == "g15") ''
+            '' + lib.optionalString (host == "g15") ''
             # scaling toggle
             bind = ,XF86Launch1,exec, scale-toggle
         '';

@@ -13,6 +13,7 @@
       firefox
       nix
       nil
+      jq
       nixpkgs-fmt
       xorg.xrandr
       xorg.xev
