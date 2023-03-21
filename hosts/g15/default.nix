@@ -46,6 +46,11 @@
 
     services.tlp.enable = false;
     services.thermald.enable = true;
+    # enables ASUS services
+    programs.rog-control-center = {
+      enable = true;
+      autoStart = true;
+    };
     services.asusd.enable = true;
     services.asusd.enableUserService = true;
 
