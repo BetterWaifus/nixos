@@ -38,8 +38,6 @@
       nil
       vlc
       i3lock-color
-      xfce.xfce4-taskmanager
-      xfce.xfce4-power-manager
       gimp-with-plugins
       pavucontrol
       webcord

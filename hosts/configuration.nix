@@ -89,6 +89,7 @@
       curl
       git
       exa
+      htop
       killall
       neovim
       ntfs3g
