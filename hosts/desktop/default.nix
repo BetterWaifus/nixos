@@ -6,7 +6,7 @@
 
     styley = {
       media.enable = true;
-      picom.enable = true;
+      picom.enable = false;
       i3.enable = false;
       hyprland.enable = true;
       hyprland.monitors = {
