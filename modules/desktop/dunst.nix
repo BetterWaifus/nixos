@@ -56,7 +56,7 @@ in
         ellipsize="end"
         follow="mouse"
         font="${config.styley.font} Regular 12"
-        frame_color="{color4}"
+        frame_color="{color6}"
         frame_width=2
         horizontal_padding=10
         icon_path="${iconPath}"
