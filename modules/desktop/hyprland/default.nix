@@ -216,8 +216,8 @@ in
             # set brightness on startup
             exec-once = light -S 80
 
-            # start ROG-Control Panel
-            exec-once = rog-control-panel
+            # start ROG-Control-Center
+            exec-once = rog-control-center
         '';
       };
     };
