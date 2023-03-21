@@ -45,6 +45,7 @@
     };
 
     services.tlp.enable = false;
+    services.supergfxd.enable = true;
     services.thermald.enable = true;
     services.asusd.enable = true;
     services.asusd.enableUserService = true;
