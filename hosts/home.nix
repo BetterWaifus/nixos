@@ -2,7 +2,7 @@
 let
 nixrsf = pkgs.writeShellScriptBin "nixrsf" ''
     cd /home/styley/nixos
-    nixos-rebuild switch --flake ".#${host}"
+    sudo nixos-rebuild switch --flake ".#${host}"
   '';
 in
 {
