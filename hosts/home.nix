@@ -1,4 +1,10 @@
-{ pkgs, user, ... }:
+{ pkgs, user, host, ... }:
+let
+nixrsf = pkgs.writeShellScriptBin "nixrsf" ''
+    cd /home/styley/nixos
+    nixos-rebuild switch --flake ".#${host}"
+  '';
+in
 {
   imports = [
     ../modules
@@ -9,6 +15,10 @@
 
     nixpkgs.config.allowUnfree = true;
     home.packages = with pkgs; [
+      #scripts
+      nixrsf
+
+      #packages
       vscode
       firefox
       nix
