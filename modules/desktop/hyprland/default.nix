@@ -132,7 +132,7 @@ in
             }
 
             misc {
-                #key_press_enables_dpms = true
+                disable_hyprland_logo = true
             }
 
             # Example per-device config
