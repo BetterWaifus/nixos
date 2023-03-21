@@ -239,6 +239,9 @@ in
             '' + lib.optionalString (host == "g15") ''
             # scaling toggle
             bind = ,XF86Launch1,exec, scale-toggle
+
+            # set brightness on startup
+            exec-once = light -S 80
         '';
       };
     };
