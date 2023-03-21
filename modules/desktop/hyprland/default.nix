@@ -30,31 +30,16 @@ in
         xwayland.hidpi = false;
         extraConfig =
           ''
-            # This is an example Hyprland config file.
-            #
-            # Refer to the wiki for more information.
-
-            #
-            # Please note not all available settings / options are set here.
-            # For a full list, see the wiki
-            #
-
-            # See https://wiki.hyprland.org/Configuring/Monitors/
             ${config.styley.hyprland.displays}
 
-            # See https://wiki.hyprland.org/Configuring/Keywords/ for more
-
-            # Execute your favorite apps at launch
+            # startup
             exec-once = wal -c
             exec-once = swww init && hypr-wallpaper
             exec-once = hypr-colors
             exec-once = waybar
             exec-once = xhost si:localuser:root
 
-            # Source a file (multi-file configs)
-            # source = ~/.config/hypr/myColors.conf
-
-            # Some default env vars.
+            # environment variables
             env = XCURSOR_SIZE,24
 
             # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
@@ -75,8 +60,6 @@ in
             }
 
             general {
-                # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
                 gaps_in = 5
                 gaps_out = 10
                 border_size = 2
@@ -84,14 +67,14 @@ in
             }
 
             decoration {
-                # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
                 rounding = 10
-                inactive_opacity = 0.95
+                inactive_opacity = 0.92
+                fullscreen_opacity = 1.0
                 blur = true
                 blur_size = 3
-                blur_passes = 1
+                blur_passes = 2
                 blur_new_optimizations = true
+                multisample_edges = true;
 
                 drop_shadow = true
                 shadow_range = 4
@@ -102,7 +85,6 @@ in
             animations {
                 enabled = true
 
-                # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
 
                 bezier = myBezier, 0.05, 0.9, 0.1, 1.05
 
@@ -115,18 +97,16 @@ in
             }
 
             dwindle {
-                # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-                pseudotile = true # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-                preserve_split = true # you probably want this
+                pseudotile = true 
+                preserve_split = true 
             }
 
             master {
-                # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+
                 new_is_master = true
             }
 
             gestures {
-                # See https://wiki.hyprland.org/Configuring/Variables/ for more
                 workspace_swipe = true
                 workspace_swipe_distance = 800
             }
@@ -135,23 +115,16 @@ in
                 disable_hyprland_logo = true
             }
 
-            # Example per-device config
-            # See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
             device:epic mouse V1 {
                 sensitivity = -0.5
             }
 
-            # Example windowrule v1
-            # windowrule = float, ^(kitty)$
-            # Example windowrule v2
-            # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-            # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+            windowrulev2 = opacity 1.0 override 1.0 override,class:^(firefox)$
+            windowrulev2 = opacity 1.0 override 1.0 override,class:^(vlc)$
 
-
-            # See https://wiki.hyprland.org/Configuring/Keywords/ for more
             $mainMod = SUPER
 
-            # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+            # Binds
             bind = $mainMod, Q, exec, kitty
             bind = $mainMod, C, killactive,
             bind = $mainMod, M, exit,
