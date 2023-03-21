@@ -1,8 +1,19 @@
 { config, pkgs, user, lib, inputs, host, ... }:
+let
+  scale-toggle = pkgs.writeShellScriptBin (host == "g15") "scale-toggle" ''
+    currentscale=$(hyprctl monitors -j | jq -r '.[] | select(.name == "eDP-1") .scale')
+
+    if [ "$currentscale" = 1 ]; then
+        hyprctl keyword monitor eDP-1,2560x1440@165,0x0,1.5
+    else
+        hyprctl keyword monitor eDP-1,2560x1440@165,0x0,1
+    fi
+  '';
+in
 {
   config = lib.mkIf config.styley.hyprland.enable {
     home-manager.users.${user} = {
-      home.packages = [ pkgs.hyprwm-contrib-packages.grimblast ];
+      home.packages = [ pkgs.hyprwm-contrib-packages.grimblast scale-toggle ];
       imports = [ inputs.hyprland.homeManagerModules.default ];
 
       home = {
@@ -216,15 +227,17 @@
             bind = $mainMod, S, exec, grimblast --notify copy area
 
             # sleep control
-            bind = $mainMod, L,exec,sleep 1 && hyprctl dispatch dpms off
-            bind = $mainMod, K,exec,hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
+            bind = $mainMod, L,exec, sleep 1 && hyprctl dispatch dpms off
+            bind = $mainMod, K,exec, hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
 
-            #laptop lid switch sleep
-            bindl=,switch:on:Lid Switch,exec,exec,sleep 1 && hyprctl dispatch dpms off
-            bindl=,switch:off:Lid Switch,exec,exec,hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
+            # laptop lid switch sleep
+            bindl=,switch:on:Lid Switch,exec,exec, sleep 1 && hyprctl dispatch dpms off
+            bindl=,switch:off:Lid Switch,exec,exec, hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
 
-
-          '';
+            '' + optionalString (host == "g15") ''
+            # scaling toggle
+            bind = ,XF86Launch1,exec, scale-toggle
+        '';
       };
     };
 
