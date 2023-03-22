@@ -54,7 +54,6 @@ in {
       gimp-with-plugins
       pavucontrol
       webcord
-      lutris
       bottles
       libnotify
       autotiling
