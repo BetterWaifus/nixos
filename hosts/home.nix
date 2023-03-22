@@ -54,7 +54,7 @@ in {
       gimp-with-plugins
       pavucontrol
       webcord
-      bottles
+      lutris
       libnotify
       autotiling
       gamescope
