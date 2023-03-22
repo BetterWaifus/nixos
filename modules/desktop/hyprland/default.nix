@@ -68,7 +68,7 @@ in {
                 kb_options =
                 kb_rules =
 
-                follow_mouse =
+                follow_mouse = 3
 
                 touchpad {
                     natural_scroll = false
@@ -156,10 +156,10 @@ in {
             bind = $mainMod, G,fullscreen, 1
 
             # Move focus with mainMod + arrow keys
-            bind = $mainMod, left, movefocus, l
-            bind = $mainMod, right, movefocus, r
-            bind = $mainMod, up, movefocus, u
-            bind = $mainMod, down, movefocus, d
+            bind = $mainMod, H, movefocus, l
+            bind = $mainMod, J, movefocus, d
+            bind = $mainMod, K, movefocus, u
+            bind = $mainMod, L, movefocus, r
 
             # Switch workspaces with mainMod + [0-9]
             bind = $mainMod, 1, workspace, 1
@@ -220,8 +220,8 @@ in {
             bind = $mainMod, S, exec, grimblast --notify copy area
 
             # sleep control
-            bind = $mainMod, L,exec, sleep 1 && hyprctl dispatch dpms off
-            bind = $mainMod, K,exec, hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
+            bind = $mainMod_SHIFT, L,exec, sleep 1 && hyprctl dispatch dpms off
+            bind = $mainMod_SHIFT, K,exec, hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
 
             # laptop lid switch sleep
             bindl=,switch:on:Lid Switch,exec,exec, sleep 1 && hyprctl dispatch dpms off
