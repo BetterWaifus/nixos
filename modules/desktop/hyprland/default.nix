@@ -150,7 +150,7 @@ in {
             bind = $mainMod, V, togglefloating,
             bind = $mainMod, D, exec, rofi -show drun
             bind = $mainMod, P, pseudo, # dwindle
-            bind = $mainMod, J, togglesplit, # dwindle
+            bind = $mainMod, N, togglesplit, # dwindle
             bind = $mainMod, F,fullscreen, 0
             bind = $mainMod_SHIFT, F,fakefullscreen
             bind = $mainMod, G,fullscreen, 1
