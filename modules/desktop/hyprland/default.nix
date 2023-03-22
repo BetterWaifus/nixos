@@ -14,6 +14,16 @@ let
 in
 {
   config = lib.mkIf config.styley.hyprland.enable {
+
+    programs.hyprland = {
+    enable = true;
+
+    xwayland = {
+      enable = true;
+      hidpi = false;
+    };
+  };
+  
     home-manager.users.${user} = {
       home.packages = [ pkgs.hyprwm-contrib-packages.grimblast scale-toggle ];
       imports = [ inputs.hyprland.homeManagerModules.default ];
