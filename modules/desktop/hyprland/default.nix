@@ -42,10 +42,6 @@ in {
       imports = [inputs.hyprland.homeManagerModules.default];
 
       home = {
-        sessionVariables = {
-          "XCURSOR_SIZE" = "24";
-        };
-
         file.".config/hypr/hyprland.conf".text = lib.concatStringsSep "\n" [
           ''
             ${config.styley.hyprland.displays}
