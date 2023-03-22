@@ -61,7 +61,7 @@ in {
       gamescope
       playerctl
       openrgb
-      nvtop-amd
+      nvtop
       powertop
       slurp
       alejandra
