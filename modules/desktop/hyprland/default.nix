@@ -22,11 +22,10 @@ in {
   imports = [
     inputs.hyprland.nixosModules.default
   ];
-  config = lib.mkIf config.styley.hyprland.enable {
 
+  config = lib.mkIf config.styley.hyprland.enable {
     programs.hyprland = {
       enable = true;
-      systemdIntegration = true;
 
       xwayland = {
         enable = true;
@@ -46,10 +45,8 @@ in {
         sessionVariables = {
           "XCURSOR_SIZE" = "24";
         };
-      };
 
-      wayland.windowManager.hyprland = {
-        extraConfig =
+        file.".config/hypr/hyprland.conf".text = lib.concatStringsSep "\n" [
           ''
             ${config.styley.hyprland.displays}
 
@@ -230,8 +227,9 @@ in {
             bindl=,switch:on:Lid Switch,exec,exec, sleep 1 && hyprctl dispatch dpms off
             bindl=,switch:off:Lid Switch,exec,exec, hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
 
+            +
           ''
-          + lib.optionalString (host == "g15") ''
+          (lib.optionalString (host == "g15") ''
             # scaling toggle
             bind = ,XF86Launch1,exec, scale-toggle
 
@@ -240,7 +238,8 @@ in {
 
             # start ROG-Control-Center
             exec-once = rog-control-center
-          '';
+          '')
+        ];
       };
     };
 
