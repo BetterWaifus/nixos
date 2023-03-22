@@ -19,9 +19,27 @@
     fi
   '';
 in {
+  imports = [
+    inputs.hyprland.nixosModules.default
+  ];
   config = lib.mkIf config.styley.hyprland.enable {
+
+    programs.hyprland = {
+      enable = true;
+      systemdIntegration = true;
+
+      xwayland = {
+        enable = true;
+        hidpi = false;
+      };
+    };
+
+    environment.systemPackages = with pkgs; [
+      hyprland.xdg-desktop-portal-hyprland
+    ];
+
     home-manager.users.${user} = {
-      home.packages = [pkgs.hyprwm-contrib-packages.grimblast pkgs.hyprland.xdg-desktop-portal-hyprland scale-toggle];
+      home.packages = [pkgs.hyprwm-contrib-packages.grimblast scale-toggle];
       imports = [inputs.hyprland.homeManagerModules.default];
 
       home = {
@@ -31,9 +49,6 @@ in {
       };
 
       wayland.windowManager.hyprland = {
-        enable = true;
-        systemdIntegration = true;
-        xwayland.hidpi = false;
         extraConfig =
           ''
             ${config.styley.hyprland.displays}

@@ -24,6 +24,8 @@
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     };
 
+    programs.hyprland.nvidiaPatches = true; 
+    
     home-manager.users.${user} = {
       wayland.windowManager.hyprland = {
         nvidiaPatches = true;
