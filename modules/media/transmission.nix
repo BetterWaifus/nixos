@@ -1,12 +1,19 @@
-{ pkgs, user, lib, config, ... }:
 {
+  pkgs,
+  user,
+  lib,
+  config,
+  ...
+}: {
   config = lib.mkIf config.styley.media.enable {
     # transmission dark mode, the default theme is hideous
     nixpkgs.overlays = [
       (self: super: {
-        transmission = super.transmission.overrideAttrs
+        transmission =
+          super.transmission.overrideAttrs
           (old: rec {
-            themeSrc = super.fetchzip
+            themeSrc =
+              super.fetchzip
               {
                 url = "https://git.eigenlab.org/sbiego/transmission-web-soft-theme/-/archive/master/transmission-web-soft-theme-master.tar.gz";
                 sha256 = "sha256-TAelzMJ8iFUhql2CX8lhysXKvYtH+cL6BCyMcpMaS9Q=";
@@ -100,9 +107,8 @@
 
     home-manager.users.${user} = {
       home = {
-        packages = with pkgs; [ transmission-remote-gtk ];
+        packages = with pkgs; [transmission-remote-gtk];
       };
     };
-
   };
 }

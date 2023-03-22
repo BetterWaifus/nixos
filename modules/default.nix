@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   imports = [
     # Desktop
     ./desktop/dunst.nix

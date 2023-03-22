@@ -1,10 +1,15 @@
-{ config, pkgs, user, lib, host, ... }:
 {
+  config,
+  pkgs,
+  user,
+  lib,
+  host,
+  ...
+}: {
   config = lib.mkIf config.styley.i3.enable {
-
     services.xserver.enable = true;
 
-    environment.pathsToLink = [ "/libexec" ];
+    environment.pathsToLink = ["/libexec"];
     services.xserver.desktopManager.xterm.enable = false;
     services.xserver.windowManager.i3.package = pkgs.i3-gaps;
     services.xserver.displayManager.defaultSession = "none+i3";
@@ -18,7 +23,6 @@
     };
 
     home-manager.users.${user} = {
-
       xsession.windowManager.i3 = {
         enable = true;
         config = {
@@ -43,7 +47,7 @@
           };
 
           fonts = {
-            names = [ config.styley.font ];
+            names = [config.styley.font];
             style = "Regular";
             size = 8.0;
           };
@@ -57,7 +61,7 @@
             modifier = "Mod4";
           };
 
-          bars = lib.mkForce [ ];
+          bars = lib.mkForce [];
 
           keybindings = lib.mkOptionDefault {
             "Mod4+Shift+S" = "exec maim -s | xclip -sel clip -t image/png";
@@ -110,7 +114,6 @@
 
           client.background       $bg
         '';
-
       };
     };
   };

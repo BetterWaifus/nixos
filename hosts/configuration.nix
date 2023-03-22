@@ -1,6 +1,8 @@
-{ pkgs, user, ... }:
 {
-
+  pkgs,
+  user,
+  ...
+}: {
   networking.hostName = "styley-pc";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -51,7 +53,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  users.extraUsers.${user}.extraGroups = [ "audio" "video" ];
+  users.extraUsers.${user}.extraGroups = ["audio" "video"];
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
@@ -72,7 +74,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user} = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     initialPassword = "password";
   };
 
@@ -109,7 +111,7 @@
       wine
 
       # support 64-bit only
-      (wine.override { wineBuild = "wine64"; })
+      (wine.override {wineBuild = "wine64";})
 
       # wine-staging (version with experimental features)
       wineWowPackages.staging
@@ -129,7 +131,7 @@
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
-      (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Ubuntu" ]; })
+      (nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono" "Ubuntu"];})
     ];
   };
 

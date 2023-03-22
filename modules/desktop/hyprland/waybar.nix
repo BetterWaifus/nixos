@@ -1,5 +1,10 @@
-{ pkgs, user, lib, config, ... }:
 {
+  pkgs,
+  user,
+  lib,
+  config,
+  ...
+}: {
   config = lib.mkIf config.styley.hyprland.enable {
     home-manager.users.${user} = {
       programs.waybar = {
@@ -13,14 +18,14 @@
           };
         });
         settings = [
-          ({
+          {
             height = 2;
             margin = "0 0 0 0";
             layer = "top";
             position = "top";
-            tray = { spacing = 10; };
-            modules-center = [ ];
-            modules-left = [ "wlr/workspaces" "hyprland/window" ];
+            tray = {spacing = 10;};
+            modules-center = [];
+            modules-left = ["wlr/workspaces" "hyprland/window"];
             modules-right = [
               "network"
               "pulseaudio"
@@ -32,7 +37,7 @@
             battery = {
               format = "{icon}  {capacity}%";
               format-charging = "  {capacity}%";
-              format-icons = [ "" "" "" "" "" ];
+              format-icons = ["" "" "" "" ""];
               states = {
                 critical = 20;
               };
@@ -53,10 +58,10 @@
               format = "{usage}% ";
               tooltip = false;
             };
-            memory = { format = "{}% "; };
+            memory = {format = "{}% ";};
             backlight = {
               format = "{icon}  {percent}%";
-              format-icons = [ "󰃞" "󰃟" "󰃝" "" ];
+              format-icons = ["󰃞" "󰃟" "󰃝" ""];
               on-scroll-up = "light -A 10";
               on-scroll-down = "light -U 10";
             };
@@ -73,11 +78,11 @@
               format = "{icon}  {volume}%";
               scroll-step = 1;
               format-muted = "婢 Muted";
-              format-icons = [ "" "" "" ];
+              format-icons = ["" "" ""];
               on-click-right = "pavucontrol";
               tooltip = false;
             };
-          })
+          }
         ];
         style = ''
           #waybar {

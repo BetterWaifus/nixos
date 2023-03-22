@@ -1,5 +1,12 @@
-{ config, pkgs, user, lib, inputs, host, ... }:
-let
+{
+  config,
+  pkgs,
+  user,
+  lib,
+  inputs,
+  host,
+  ...
+}: let
   scale-toggle = pkgs.writeShellScriptBin "scale-toggle" ''
     currentscale=$(hyprctl monitors -j | jq -r '.[] | select(.name == "eDP-1") .scale')
 
@@ -11,22 +18,11 @@ let
         hypr-wallpaper && hypr-colors && notify-send "Scale Changed" "1"
     fi
   '';
-in
-{
+in {
   config = lib.mkIf config.styley.hyprland.enable {
-
-    programs.hyprland = {
-    enable = true;
-
-    xwayland = {
-      enable = true;
-      hidpi = false;
-    };
-  };
-  
     home-manager.users.${user} = {
-      home.packages = [ pkgs.hyprwm-contrib-packages.grimblast scale-toggle ];
-      imports = [ inputs.hyprland.homeManagerModules.default ];
+      home.packages = [pkgs.hyprwm-contrib-packages.grimblast pkgs.hyprland.xdg-desktop-portal-hyprland scale-toggle];
+      imports = [inputs.hyprland.homeManagerModules.default];
 
       home = {
         sessionVariables = {
@@ -107,8 +103,8 @@ in
             }
 
             dwindle {
-                pseudotile = true 
-                preserve_split = true 
+                pseudotile = true
+                preserve_split = true
             }
 
             master {
@@ -219,7 +215,8 @@ in
             bindl=,switch:on:Lid Switch,exec,exec, sleep 1 && hyprctl dispatch dpms off
             bindl=,switch:off:Lid Switch,exec,exec, hyprctl dispatch dpms on && hypr-wallpaper && hypr-colors
 
-            '' + lib.optionalString (host == "g15") ''
+          ''
+          + lib.optionalString (host == "g15") ''
             # scaling toggle
             bind = ,XF86Launch1,exec, scale-toggle
 
@@ -228,7 +225,7 @@ in
 
             # start ROG-Control-Center
             exec-once = rog-control-center
-        '';
+          '';
       };
     };
 

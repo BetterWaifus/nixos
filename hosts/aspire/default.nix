@@ -1,9 +1,13 @@
-{ config, pkgs, user, lib, ... }:
 {
-  imports = [ ./hardware.nix ];
+  config,
+  pkgs,
+  user,
+  lib,
+  ...
+}: {
+  imports = [./hardware.nix];
 
   config = {
-
     styley = {
       media.enable = false;
       picom.enable = true;
@@ -25,7 +29,6 @@
     services.tlp.enable = true;
 
     home-manager.users.${user} = {
-
       xsession.windowManager.i3 = lib.mkIf config.styley.i3.enable {
         config = {
           startup = [
@@ -50,8 +53,3 @@
     };
   };
 }
-  
-
- 
-
-

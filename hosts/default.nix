@@ -1,5 +1,8 @@
-{ config, lib, ... }:
 {
+  config,
+  lib,
+  ...
+}: {
   options.styley.font = lib.mkOption {
     default = "Inter";
   };

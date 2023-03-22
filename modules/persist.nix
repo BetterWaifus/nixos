@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   config = {
     styley.persist.home.directories = [
       "Downloads"

@@ -1,9 +1,13 @@
-{ config, pkgs, user, lib, ... }:
 {
-  imports = [ ./hardware.nix ];
+  config,
+  pkgs,
+  user,
+  lib,
+  ...
+}: {
+  imports = [./hardware.nix];
 
   config = {
-
     styley = {
       media.enable = false;
       picom.enable = false;
@@ -26,20 +30,20 @@
       };
       grub = {
         enable = true;
-        devices = [ "nodev" ];
+        devices = ["nodev"];
         efiSupport = true;
         version = 2;
         extraEntries = lib.concatStringsSep "\n" [
-        ''
-          menuentry "Windows 11" {
-            insmod part_gpt
-            insmod fat
-            insmod search_fs_uuid
-            insmod chain
-            search --fs-uuid --set=root A89B-B87E
-            chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-          }
-        ''
+          ''
+            menuentry "Windows 11" {
+              insmod part_gpt
+              insmod fat
+              insmod search_fs_uuid
+              insmod chain
+              search --fs-uuid --set=root A89B-B87E
+              chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+            }
+          ''
         ];
       };
     };
@@ -63,7 +67,7 @@
       xsession.windowManager.i3 = lib.mkIf config.styley.i3.enable {
         config = {
           assigns = {
-            "1" = [{ class = "^firefox$"; } { class = "^discord$"; }];
+            "1" = [{class = "^firefox$";} {class = "^discord$";}];
           };
           startup = [
             {
@@ -97,8 +101,7 @@
     };
 
     # Enables AMD GPU drivers
-    services.xserver.videoDrivers = [ "amdgpu" ];
+    services.xserver.videoDrivers = ["amdgpu"];
     hardware.opengl.enable = true;
-
   };
 }

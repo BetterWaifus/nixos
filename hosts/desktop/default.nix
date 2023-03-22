@@ -1,9 +1,13 @@
-{ config, pkgs, user, lib, ... }:
 {
-  imports = [ ./hardware.nix ];
+  config,
+  pkgs,
+  user,
+  lib,
+  ...
+}: {
+  imports = [./hardware.nix];
 
   config = {
-
     styley = {
       media.enable = true;
       picom.enable = false;
@@ -29,18 +33,17 @@
       };
       grub = {
         enable = true;
-        devices = [ "nodev" ];
+        devices = ["nodev"];
         efiSupport = true;
         version = 2;
       };
     };
 
     home-manager.users.${user} = {
-
       xsession.windowManager.i3 = lib.mkIf config.styley.i3.enable {
         config = {
           assigns = {
-            "1" = [{ class = "^firefox$"; } { class = "^discord$"; }];
+            "1" = [{class = "^firefox$";} {class = "^discord$";}];
           };
           startup = [
             {
@@ -74,9 +77,8 @@
     };
 
     # Enables Nvidia drivers
-    services.xserver.videoDrivers = [ "nvidia" ];
+    services.xserver.videoDrivers = ["nvidia"];
     hardware.opengl.enable = true;
     hardware.nvidia.open = true;
-
   };
 }

@@ -1,6 +1,6 @@
-{ ... }: {
+{...}: {
   # booting with zfs
-  boot.supportedFilesystems = [ "zfs" ];
+  boot.supportedFilesystems = ["zfs"];
   boot.zfs.devNodes = "/dev/disk/by-id";
 
   # standard zfs filesystem layout
@@ -28,5 +28,4 @@
     device = "zroot/safe/persist";
     fsType = "zfs";
   };
-
 }

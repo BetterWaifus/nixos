@@ -1,15 +1,19 @@
-{ pkgs, user, ... }: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   services.gvfs.enable = true;
 
   home-manager.users.${user} = {
-    home = { packages = with pkgs; [ dconf ]; };
+    home = {packages = with pkgs; [dconf];};
 
     gtk = {
       enable = true;
       theme = {
         name = "Catppuccin-Mocha-Compact-Sky-Dark";
         package = pkgs.catppuccin-gtk.override {
-          accents = [ "sky" ];
+          accents = ["sky"];
           variant = "mocha";
           size = "compact";
         };

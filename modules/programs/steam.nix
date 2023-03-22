@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   config = {
     # Enables Steam controller support and other steam related services
     programs.steam.enable = true;

@@ -1,11 +1,14 @@
-{ pkgs, user, host, ... }:
-let
-nixrsf = pkgs.writeShellScriptBin "nixrsf" ''
+{
+  pkgs,
+  user,
+  host,
+  ...
+}: let
+  nixrsf = pkgs.writeShellScriptBin "nixrsf" ''
     cd /home/styley/nixos
     sudo nixos-rebuild switch --flake ".#${host}"
   '';
-in
-{
+in {
   imports = [
     ../modules
   ];
@@ -52,6 +55,7 @@ in
       pavucontrol
       webcord
       lutris
+      bottles
       libnotify
       autotiling
       gamescope
@@ -59,7 +63,9 @@ in
       openrgb
       nvtop-amd
       powertop
-      (pkgs.callPackage ../modules/programs/parsec.nix { })
+      slurp
+      alejandra
+      (pkgs.callPackage ../modules/programs/parsec.nix {})
     ];
 
     home.file."./.bashrc" = {

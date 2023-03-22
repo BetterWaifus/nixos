@@ -1,5 +1,11 @@
-{ pkgs, user, theme, config, lib, ... }:
 {
+  pkgs,
+  user,
+  theme,
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf config.styley.i3.enable {
     home-manager.users.${user} = {
       home.file = {
@@ -40,7 +46,7 @@
           --time-font=${config.styley.font}  \
           --date-font=${config.styley.font}  \
           --time-str="%H:%M"                 \
-          --date-str="%m-%d-%Y"              \ 
+          --date-str="%m-%d-%Y"              \
         '';
       };
     };

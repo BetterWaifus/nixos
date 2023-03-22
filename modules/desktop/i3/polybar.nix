@@ -1,9 +1,14 @@
-{ pkgs, host, user, config, lib, ... }:
-let
+{
+  pkgs,
+  host,
+  user,
+  config,
+  lib,
+  ...
+}: let
   kitty = "${pkgs.kitty}/bin/kitty";
   nmtui = "${pkgs.networkmanager}/bin/nmtui";
-in
-{
+in {
   config = lib.mkIf config.styley.i3.enable {
     home-manager.users.${user} = {
       services.polybar = {
@@ -217,4 +222,3 @@ in
     };
   };
 }
-  

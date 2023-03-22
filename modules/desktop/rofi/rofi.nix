@@ -1,7 +1,17 @@
-{ pkgs, user, config, ... }:
 {
+  pkgs,
+  user,
+  config,
+  ...
+}: {
   home-manager.users.${user} = {
-    home.packages = with pkgs; [ (if config.styley.hyprland.enable then rofi-wayland else rofi) ];
+    home.packages = with pkgs; [
+      (
+        if config.styley.hyprland.enable
+        then rofi-wayland
+        else rofi
+      )
+    ];
     home.file = {
       ".config/rofi/config.rasi".text = ''
         /* Rounded Dark theme. */

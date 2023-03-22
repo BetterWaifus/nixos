@@ -1,5 +1,10 @@
-{ host, user, lib, config, ... }:
 {
+  host,
+  user,
+  lib,
+  config,
+  ...
+}: {
   config = lib.mkIf (config.styley.hyprland.enable && host == "desktop") {
     hardware.nvidia = {
       # open = true;
