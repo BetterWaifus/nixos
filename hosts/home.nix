@@ -64,6 +64,8 @@ in {
       powertop
       slurp
       alejandra
+      fd
+      lm_sensors
       (pkgs.callPackage ../modules/programs/parsec.nix {})
     ];
 

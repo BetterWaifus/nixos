@@ -11,11 +11,11 @@
     currentscale=$(hyprctl monitors -j | jq -r '.[] | select(.name == "eDP-1") .scale')
 
     if [ "$currentscale" = 1 ]; then
-        hyprctl keyword monitor eDP-1,2560x1440@165,0x0,1.5 && swww kill && swww init
-        hypr-wallpaper && hypr-colors && notify-send "Scale Changed" "1.5"
+        hyprctl keyword monitor eDP-1,2560x1440@60,0x0,1.5 && swww kill && swww init
+        hypr-wallpaper && hypr-colors && notify-send "Normal Mode" "1.5x 60hz"
     else
         hyprctl keyword monitor eDP-1,2560x1440@165,0x0,1 && swww kill && swww init
-        hypr-wallpaper && hypr-colors && notify-send "Scale Changed" "1"
+        hypr-wallpaper && hypr-colors && notify-send "Gaming Mode" "1x 165hz"
     fi
   '';
 in {
