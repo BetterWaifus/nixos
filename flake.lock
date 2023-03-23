@@ -100,15 +100,15 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1679458127,
-        "narHash": "sha256-HHGEYC5noSntKU58XbL6bPss8dX5p75l6WePl81RU2A=",
-        "owner": "iynaix",
+        "lastModified": 1679576723,
+        "narHash": "sha256-1DS+XC2pggl430sP+7FunrF9CPldjAxbsHJg0ZfxRqo=",
+        "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "09b91298966c45abd6d10dd22817873fef037319",
+        "rev": "463690a27ac9c921d34dad7169a3d2c8cea5b46f",
         "type": "github"
       },
       "original": {
-        "owner": "iynaix",
+        "owner": "hyprwm",
         "repo": "Hyprland",
         "type": "github"
       }
