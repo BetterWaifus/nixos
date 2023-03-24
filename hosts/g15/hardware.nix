@@ -27,5 +27,5 @@
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   #high-resolution display
-  hardware.video.hidpi.enable = false;
+  fonts.optimizeForVeryHighDPI = false;
 }

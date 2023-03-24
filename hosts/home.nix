@@ -23,7 +23,7 @@ in {
 
       #packages
       vscode
-      firefox
+      firefox-unwrapped
       nix
       nil
       jq
@@ -55,6 +55,7 @@ in {
       pavucontrol
       webcord
       lutris
+      bottles
       libnotify
       autotiling
       gamescope
