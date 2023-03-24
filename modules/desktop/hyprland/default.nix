@@ -85,8 +85,8 @@ in {
                 inactive_opacity = 0.92
                 fullscreen_opacity = 1.0
                 blur = true
-                blur_size = 3
-                blur_passes = 2
+                blur_size = 6
+                blur_passes = 1
                 blur_new_optimizations = true
                 multisample_edges = true;
 
@@ -189,11 +189,6 @@ in {
             bindm = $mainMod, mouse:272, movewindow
             bindm = $mainMod, mouse:273, resizewindow
 
-            # volume control
-            bind = ,XF86AudioLowerVolume,exec, amixer set Master 1%-
-            bind = ,XF86AudioMute,exec, amixer set Master toggle
-            bind = ,XF86AudioRaiseVolume,exec, amixer set Master 1%+
-
             # media control
             bind = ,XF86AudioPlay,exec, playerctl play-pause
             bind = ,XF86AudioNext,exec, playerctl next
@@ -234,6 +229,17 @@ in {
 
             # start ROG-Control-Center
             exec-once = rog-control-center
+
+            # volume control
+            bind = ,XF86AudioLowerVolume,exec, amixer set Master 5%-
+            bind = ,XF86AudioMute,exec, amixer set Master toggle
+            bind = ,XF86AudioRaiseVolume,exec, amixer set Master 5%+
+          '')
+          (lib.optionalString (host == "desktop") ''
+            # volume control
+            bind = ,XF86AudioLowerVolume,exec, amixer set Master 1%-
+            bind = ,XF86AudioMute,exec, amixer set Master toggle
+            bind = ,XF86AudioRaiseVolume,exec, amixer set Master 1%+
           '')
         ];
       };
