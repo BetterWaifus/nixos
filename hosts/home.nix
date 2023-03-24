@@ -23,7 +23,7 @@ in {
 
       #packages
       vscode
-      firefox-unwrapped
+      firefox
       nix
       nil
       jq
