@@ -11,6 +11,7 @@
       "file:///home/${user}/Documents"
       "file:///home/${user}/Documents/Apps"
       "file:///home/${user}/Pictures"
+      "file:///home/${user}/Pictures/Screenshots"
       "file:///home/${user}/nixos"
       "file:///persist"
       "file:///media/2TB_SSHD/Library"

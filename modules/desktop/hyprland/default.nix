@@ -18,6 +18,15 @@
         hypr-wallpaper && hypr-colors && notify-send "Gaming Mode" "1x 165hz"
     fi
   '';
+
+  hypr-ocr = with pkgs;
+    pkgs.writeShellScriptBin "hypr-ocr" ''
+      img="/home/${user}/Pictures/Screenshots/ocr.png"
+      grimblast save area $img
+      ${tesseract5}/bin/tesseract $img - | wl-copy
+      rm $img
+      notify-send "$(wl-paste)"
+    '';
 in {
   imports = [
     inputs.hyprland.nixosModules.default
@@ -38,7 +47,7 @@ in {
     ];
 
     home-manager.users.${user} = {
-      home.packages = [pkgs.hyprwm-contrib-packages.grimblast scale-toggle];
+      home.packages = [pkgs.hyprwm-contrib-packages.grimblast pkgs.hyprwm-contrib-packages.hyprprop scale-toggle hypr-ocr pkgs.wl-clipboard];
       imports = [inputs.hyprland.homeManagerModules.default];
 
       home = {
@@ -207,8 +216,11 @@ in {
             bind = $mainMod, Z, exec, dunstctl history-pop
             bind = $mainMod, X, exec, dunstctl close-all
 
-            # screenshot control
+            # screenshot
             bind = $mainMod, S, exec, grimblast --notify copy area
+
+            # copy text from selection with tesseract ocr
+            bind = $mainMod_SHIFT, S, exec, hypr-ocr
 
             # sleep control
             bind = $mainMod_SHIFT, L,exec, sleep 1 && hyprctl dispatch dpms off
