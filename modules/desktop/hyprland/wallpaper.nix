@@ -7,7 +7,7 @@
 }: let
   hypr-wallpaper = pkgs.writeShellScriptBin "hypr-wallpaper" ''
     wal -n -i "${../wallpaper/${host}}"
-    swww img "$(< "$HOME/.cache/wal/wal")"
+    swww img "$(< "$HOME/.cache/wal/wal")" --transition-type wipe --transition-step 150 --transition-fps 60
   '';
   hypr-colors = pkgs.writeShellScriptBin "hypr-colors" ''
     source ~/.cache/wal/colors.sh
