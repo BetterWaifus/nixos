@@ -4,7 +4,7 @@
   host,
   ...
 }: let
-  nixrsf = pkgs.writeShellScriptBin "nixrsf" ''
+  rebuild = pkgs.writeShellScriptBin "rebuild" ''
     cd /home/styley/nixos
     sudo nixos-rebuild switch --flake ".#${host}"
   '';
