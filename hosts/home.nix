@@ -19,7 +19,7 @@ in {
     nixpkgs.config.allowUnfree = true;
     home.packages = with pkgs; [
       #scripts
-      nixrsf
+      rebuild
 
       #packages
       vscode
