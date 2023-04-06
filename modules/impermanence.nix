@@ -35,10 +35,9 @@ in {
     fileSystems."/persist".neededForBoot = true;
 
     users.mutableUsers = false;
-    # mkpasswd -m sha-512 'MY_ROOT_PASSWORD' | sudo tee -a /persist/passwords/root
-    users.users.root.passwordFile = "/persist/passwords/root";
-    # mkpasswd -m sha-512 'USER_PASSWORD' | sudo tee -a /persist/passwords/PUT_USER_NAME
-    users.users.${user}.passwordFile = "/persist/passwords/${user}";
+    # mkpasswd -m sha-512 'MY_ROOT_PASSWORD' | sudo tee -a /persist/etc/shadow/root
+    users.users.root.passwordFile = "/persist/etc/shadow/root";
+    users.users.${user}.passwordFile = "/persist/etc/shadow/${user}";
 
     # persist files on root filesystem
     environment.persistence."/persist" = {

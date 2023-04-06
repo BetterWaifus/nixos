@@ -53,7 +53,7 @@ in {
       i3lock-color
       gimp-with-plugins
       pavucontrol
-      webcord
+      discord
       lutris
       bottles
       libnotify
