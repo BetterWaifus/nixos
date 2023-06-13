@@ -32,7 +32,6 @@
         enable = true;
         devices = ["nodev"];
         efiSupport = true;
-        version = 2;
         extraEntries = lib.concatStringsSep "\n" [
           ''
             menuentry "Windows 11" {
